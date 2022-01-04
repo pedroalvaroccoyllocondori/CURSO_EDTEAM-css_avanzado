@@ -1,0 +1,17 @@
+/* flujo de trabajo css */
+/* solo se puede modificar el fujo visual de los elementos con css pero  no el flujo de la estructura html */
+
+body{
+    display: flex;
+
+}
+
+.p-2{
+    background-color: turquoise;
+    order: -1;
+}
+
+:not(.p-2){
+    order:1000;
+    background-color:tomato
+}
