@@ -1,21 +1,37 @@
-/* espacio que ocupan los elemtos (espacio reservado)*/
-/* hay algunas propiedades en css que hacen que los elemtos pierdan su espacio reservado  */
+/* propiedad offset posicionamiento
+position: static| relative|absolute|fixed |sticky
 
-.conteiner{
-    outline: 5px solid blue;
-    margin-bottom:1em;
+
+static: valor por defecto de cada elemto
+
+un elemento esta posicionado cuando tiene los siguientes valores:
+| relative|absolute|fixed |sticky
+y adquiere las siguientes propiedades(offset)
+
+-top :a partir de arriba a abajo
+-left : de la derecha a la izquierda
+-right  : de la derecha a la izquierda
+-buttom  :de abajo a arriba
+
+NOTA: TAMBN SE PERMITEN VALORES NEGATIVOS 
+
+
+*/
+
+body {
+    overflow-x: hidden;
 
 }
 
-.conteiner p{
-    border: 10px solid;
-    padding:1rem;
-    opacity:0 /*propiedad que no hace perder espacio de trabajo*/
+.p-2{
+    position: relative;
+    background-color:red;
+    top:50%;
+    opacity: 0.5;
+    left: 50%;
 }
 
-.p-1{
-    border: 10px solid red;
-    padding:1rem;
-    display: none;/*propiedad que hace perder espacio de trabajo*/
-
+.conteiner1{
+    outline:1px solid red;
+    height:400px
 }
