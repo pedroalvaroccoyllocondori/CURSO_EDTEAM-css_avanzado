@@ -1,37 +1,21 @@
-/* propiedad offset posicionamiento
-position: static| relative|absolute|fixed |sticky
+/* position relative
 
+-no pierde su espacio reservado
 
-static: valor por defecto de cada elemto
+-busca la referencia del elemento padre
 
-un elemento esta posicionado cuando tiene los siguientes valores:
-| relative|absolute|fixed |sticky
-y adquiere las siguientes propiedades(offset)
-
--top :a partir de arriba a abajo
--left : de la derecha a la izquierda
--right  : de la derecha a la izquierda
--buttom  :de abajo a arriba
-
-NOTA: TAMBN SE PERMITEN VALORES NEGATIVOS 
-
-
+adquiere las propiedades offset (de posicionamiento)
 */
 
-body {
-    overflow-x: hidden;
-
+.conteiner1 {
+    border: 1px solid red
 }
 
 .p-2{
     position: relative;
-    background-color:red;
-    top:50%;
+    background-color:aqua;
     opacity: 0.5;
-    left: 50%;
-}
-
-.conteiner1{
-    outline:1px solid red;
-    height:400px
+    top: 2rem;
+    left: 2rem;
+    /* display: none; */
 }
