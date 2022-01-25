@@ -1,21 +1,25 @@
-/* position relative
+/* position absolute
 
--no pierde su espacio reservado
+-si pierde su espacio reservado
 
--busca la referencia del elemento padre
+-busca la referencia del ancestro mas cercano que este posicionado
+
+NOTA: SI NO HAY ANCESTROS POSICIONADOS SU REFERENCIA ES EL BODY
 
 adquiere las propiedades offset (de posicionamiento)
 */
 
 .conteiner1 {
-    border: 1px solid red
+    outline: 10px solid red;/*outline no genera espacio reservado*/
+    position: relative;
+    height: 400px;
 }
 
 .p-2{
-    position: relative;
+    position: absolute;
     background-color:aqua;
     opacity: 0.5;
-    top: 2rem;
+    top: 10rem;
     left: 2rem;
     /* display: none; */
 }
