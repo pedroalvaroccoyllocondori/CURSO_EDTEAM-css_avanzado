@@ -1,5 +1,5 @@
 /* position absolute
-ejercicio
+ejercicio menu desplegable con posicionamiento
 
 */
 
@@ -8,58 +8,51 @@ ejercicio
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
+    font-family:sans-serif
+}
+
+.header{
+    width: 100%;
+    background: rebeccapurple;
+}
+.menu{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    list-style: none;
 }
-.conteiner{
-    
-    
-    position: relative;
-}
-
-
-/* hover */
-.conteiner:hover .tooltip{
-    opacity: 1;
-    top:-2.75rem
-}
-
-
-.tooltip{
-    opacity: 0;
+.submenu{
     position: absolute;
-    top: -1.9rem;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: opacity 0.25s ,top 0.25s;
+    background:black;
+  
+    flex-direction: column;
+    top: 100%;
+    display:none;
+}
+.submenu .submenu{
+     left: 100%;
+     top: 0;
+     background:red
 }
 
+.item{
+    position: relative;
 
+}
 
+.item:hover > .submenu{
+    display: flex;
+}
 
+.link:hover{
+    background:indigo
+}
 
-
-.tooltip .content {
-    background: black;
+.link{
     color: white;
+    text-decoration: none;
+    display: inline-block;
     padding: 0.5rem 0.75rem;
-    border-radius:0.25rem;
-    white-space: nowrap;
-}
-
-.tooltip .triangulo{
-    position:absolute;
-    background: black;
-    width: 10px;
-    height: 10px;
-    transform: rotate(45deg) translate(-50%, 50%);
-    left:50%;
-    bottom: -.2rem;
-    /* border: 1px solid red; */
-
+    width: 100%;
 }
