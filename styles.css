@@ -1,58 +1,20 @@
-/* position absolute
-ejercicio menu desplegable con posicionamiento
+/*posicionamiento
+
+position:
+static(default)/absolute/relative/fixed /sticky
+
+cuando un elemento esta posicionado se pueden usar las propiedades offset
+
+-top 
+-rigth
+-left
+-bottom
+-left
+
+cada valor tiene una referencia para moverse
+
+relative --su referencia es el padre 
+absolute- su referencia es el  ancestro mas cercano posicionado
 
 */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family:sans-serif
-}
-
-.header{
-    width: 100%;
-    background: rebeccapurple;
-}
-.menu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-}
-.submenu{
-    position: absolute;
-    background:black;
-  
-    flex-direction: column;
-    top: 100%;
-    display:none;
-}
-.submenu .submenu{
-     left: 100%;
-     top: 0;
-     background:red
-}
-
-.item{
-    position: relative;
-
-}
-
-.item:hover > .submenu{
-    display: flex;
-}
-
-.link:hover{
-    background:indigo
-}
-
-.link{
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    padding: 0.5rem 0.75rem;
-    width: 100%;
-}
