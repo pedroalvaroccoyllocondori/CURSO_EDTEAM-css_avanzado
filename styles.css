@@ -1,20 +1,57 @@
-/*posicionamiento
+/*posicionamiento POSITION FIXED
+pierde su espacio reservado
+su referencia es el wievport
 
-position:
-static(default)/absolute/relative/fixed /sticky
-
-cuando un elemento esta posicionado se pueden usar las propiedades offset
-
--top 
--rigth
--left
--bottom
--left
-
-cada valor tiene una referencia para moverse
-
-relative --su referencia es el padre 
-absolute- su referencia es el  ancestro mas cercano posicionado
 
 */
+*{
+    margin: 0;
+    padding: 0;
+}
 
+body{
+    min-height:200vh;
+    margin-top: 4rem;
+}
+.header{
+    background:rebeccapurple;
+    width: 100%;
+    position: fixed;
+    top: 0;
+
+}
+.menu{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+a{
+    color:white;
+    display:inline-block;
+    text-decoration:none;
+}
+li{
+    margin-right: 2em;
+    list-style: none;
+    padding: 1rem;
+}
+
+/* pseudoclase para mostrar mejor el contenid+ */
+.conteiner{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+main{
+    grid-column-start: span 3;
+}
+
+.sidebar{
+    position:fixed;
+    width: 100%;
+    height: 400px;
+    background-color:tomato
+}
+
+:target{
+    padding-top:3rem
+}
