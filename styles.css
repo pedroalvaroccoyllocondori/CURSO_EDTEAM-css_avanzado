@@ -1,65 +1,31 @@
-/*posicionamiento POSITION STICKY
-NO pierde su espacio reservado
-su referencia es el scroll
+/*STANKING CONTEXT
 
-solo se puede utilizar la propiedad offset top
-
-
-
+Representa el eje imaginario z
+1.-elementos con nivel de apilamiento negativo
+2.-elementos con nivel de aplilamiento static
+3.-elementos con nivel de neutro(0) o auto  (CUANDO POSICIONAMOS UN ELEMENTO TIENE 0 EN SU NIVEL DE APILAMIENTO)
+4.-elementos con nivel de apilamientomayor a 0
 */
-*{
-    margin: 0;
-    padding: 0;
+
+.element{
+    width: 200px;
+    height: 200px;
+    position: relative;
 }
 
-body{
-    min-height:200vh;
-    margin-top: 4rem;
-    padding:1rem;
+.element:nth-of-type(1){
+    background: red;
+    top: 100px;
 }
-.header{
-    background:rebeccapurple;
-    width: 100%;
-    position: fixed;
-    top: 0;
-
+.element:nth-of-type(2){
+    background: rebeccapurple;
+    opacity: 0.7;
+    top: 100px;
 }
-.menu{
-    display:flex;
-    align-items: center;
-    justify-content:center;
+.element:nth-of-type(3){
+    background: blue;
+    position:static;
 }
-a{
-    color:white;
-    display:inline-block;
-    text-decoration:none;
-}
-li{
-    margin-right: 2em;
-    list-style: none;
-    padding: 1rem;
-}
-
-/* pseudoclase para mostrar mejor el contenid+ */
-.conteiner{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    height: 200vh;
-    border-top: 1px solid red
-}
-main{
-    grid-column-start: span 3;
-}
-
-.sidebar{
-    
-    position:sticky;
-    top:2rem;
-    height: 400px;
-    width: 100%;
-    background-color:tomato
-}
-
-:target{
-    padding-top:3rem
+.element:nth-of-type(4){
+    background: violet;
 }
