@@ -1,6 +1,9 @@
-/*posicionamiento POSITION FIXED
-pierde su espacio reservado
-su referencia es el wievport
+/*posicionamiento POSITION STICKY
+NO pierde su espacio reservado
+su referencia es el scroll
+
+solo se puede utilizar la propiedad offset top
+
 
 
 */
@@ -12,6 +15,7 @@ su referencia es el wievport
 body{
     min-height:200vh;
     margin-top: 4rem;
+    padding:1rem;
 }
 .header{
     background:rebeccapurple;
@@ -40,15 +44,19 @@ li{
 .conteiner{
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    height: 200vh;
+    border-top: 1px solid red
 }
 main{
     grid-column-start: span 3;
 }
 
 .sidebar{
-    position:fixed;
-    width: 100%;
+    
+    position:sticky;
+    top:2rem;
     height: 400px;
+    width: 100%;
     background-color:tomato
 }
 
