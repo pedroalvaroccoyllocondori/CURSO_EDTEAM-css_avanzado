@@ -1,45 +1,21 @@
-/* SCOPE
-ambito y contexto en el que existe una varible
+/* HERENCIA Y CASCADA EN CSS 
+
+heredan los elementos de un scope superior
+
+*/
 
 
-tipos de scope en css
 
-
-a nivel GLOBAL
-:root{
-
+body {
+    --color:red;
+    color:var(--color)
 }
 
-a nivel DOM
-
-article{
-    --scopeDOM:red
+.conteiner{
+    color: blue;
 }
 
-a nivel LOCAL
-se ponen en la misma etiqueta
-
-HOISTING
-las declaracion de variables css puede ser en cualquier parte del la hoja de estilos
-
-
-
-
-*/ 
-:root{
-    --color:red
-}
-
-h1{
-    color: var(--color);
-}
-
-article{
-    --colorArticle:blue
-}
-
-
-p{
-    --colours:yellow;
-    color:var(--colours);
+.conteiner p{
+    --color:inherit;
+    color:var(--color)
 }
