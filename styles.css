@@ -1,67 +1,62 @@
-/* diferencia entre sintaxis SASS Y CSS
 
-
-
-*/
-
-
-/* SINTAXIS CSS */
 :root{
-    --nombre:red;
-    --valorUno:2rem;
-    --valorDos:5rem;
-    --suma:calc(var(var(--valorUno) + var(--valorDos)))
+    --headeraltura:4rem;
+    --headerMargin:1rem;
+    --tamanoFuente:1rem;
+    --tamanoTitulo:2rem;
+    --columnas:2;
+    --mostrarElemento:none;
 }
-
-h1{
-    color: var(--nombre);
-    height: var(--suma);
-    
-}
-
-/* operaciones en CSS */
-
-
-
-
-
-/* SINTAXIS EN SASS
-VARIABLES***************
-
-
-$nombre:red;
-$selector: h1
-
-#{$selector}{
-    color:red
-}
-
-
-h1{
-
-    color:$nombre
-}
-
-SCOPE*******************
-
-P{
-    $variable:blue;
-    a{
-        color:$variable
+@media screen and (min-width:1000px){
+    :root{
+        --headeraltura:3rem;
+        --headerMargin:2rem;
+        --tamanoFuente:1.25rem;
+        --tamanoTitulo:2.75rem;
+        --columnas:4;
+        --mostrarElemento:block;
     }
-}
 
-calculos******************
-$valorUno;
-$valorDos;
-$suma:$valorUno +$valorDos
-
-#{selector}{
-    color :red;
-    height:$suma;
 }
 
 
-*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: calc(var(--headeraltura) + var(--headerMargin)) ;
+    font-size: var(--tamanoFuente);
+}
+h1{
+    font-size:var(--tamanoTitulo);
+}
 
 
+header{
+    width: 100%;
+    height: var(--headeraltura);
+    background: rosybrown;
+    opacity: 0.5;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+main{
+    grid-column-start: span 3;
+}
+
+div{
+    display: grid;
+    grid-template-columns: repeat(var(--columnas), 1fr);
+}
+h2{
+    background: tomato;
+    padding: 1rem;
+}
+h3{
+    display: var(--mostrarElemento);
+}
