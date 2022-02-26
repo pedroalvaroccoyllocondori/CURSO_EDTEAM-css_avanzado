@@ -1,65 +1,45 @@
-/* VARIABLES CSS
-VALOR ALAMACENADO EN MEMORIA PARA LUEGO PODER UTILIZARLO
+/* SCOPE
+ambito y contexto en el que existe una varible
 
 
+tipos de scope en css
 
-DECLARANDO UNA VARIABLE
-:root´{
-    --custon:red
+
+a nivel GLOBAL
+:root{
+
 }
 
-USO DE LA VARIBLES CSS
+a nivel DOM
+
+article{
+    --scopeDOM:red
+}
+
+a nivel LOCAL
+se ponen en la misma etiqueta
+
+HOISTING
+las declaracion de variables css puede ser en cualquier parte del la hoja de estilos
+
+
+
+
+*/ 
+:root{
+    --color:red
+}
 
 h1{
-    color:var(--color)
+    color: var(--color);
 }
 
-RESPALDO DE VARIABLES se utiliza cuando falla una variable
-
-h1{
-    color:var(--color,valorDeRespaldo)
+article{
+    --colorArticle:blue
 }
 
-VALORES QUE PUEDE RECIBIR
-:root{
-    --colores:hsl/rgba/hexadecimal;
-    --border:1px solid red
-    --text:'hola mundo'
-    --color-dos-variable dentro de otra:var(--color)
-    --shadow:2px 2px red,2px 2px red
-}
-
-
-NOTA: SE PUEDE REALIZAR SUMA DE VARIABLES CON LA FUNCION CALC()
-*/
-
-
-:root{
-    --colorPrimario:rebeccapurple;
-    --colorAdvertencia:rosybrown;
-
-    --tamanoMinimo:3rem;
-    --tamanoMaximo:5rem;
-    --suma:calc(var(--tamanoMinimo) + var(--tamanoMaximo));
-}
-
-header{
-    
-    width: 100%; 
-    height: 3rem;
-    background: var(--colorprimario,blue);   
-}
-
-h2{
-    color:var(--colorppprimario,var(--colorAdvertencia));
-}
 
 p{
-    color:var(--colorPrimario);
-}
-
-.div{
-    width: var(--suma);
-    height: var(--tamanoMaximo);
-    background: var(--colorAdvertencia);
+    --colours:yellow;
+    color:var(--colours);
 }
