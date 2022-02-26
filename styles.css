@@ -1,96 +1,65 @@
-/*EJERCICIO DE VENTANA FLOTANTE
-solo aplicando 
-pointer event y opacidad
+/* VARIABLES CSS
+VALOR ALAMACENADO EN MEMORIA PARA LUEGO PODER UTILIZARLO
 
+
+
+DECLARANDO UNA VARIABLE
+:root´{
+    --custon:red
+}
+
+USO DE LA VARIBLES CSS
+
+h1{
+    color:var(--color)
+}
+
+RESPALDO DE VARIABLES se utiliza cuando falla una variable
+
+h1{
+    color:var(--color,valorDeRespaldo)
+}
+
+VALORES QUE PUEDE RECIBIR
+:root{
+    --colores:hsl/rgba/hexadecimal;
+    --border:1px solid red
+    --text:'hola mundo'
+    --color-dos-variable dentro de otra:var(--color)
+    --shadow:2px 2px red,2px 2px red
+}
+
+
+NOTA: SE PUEDE REALIZAR SUMA DE VARIABLES CON LA FUNCION CALC()
 */
 
-/* resetando estilos */
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} 
-body {
-    font-family: sans-serif;
-    min-height: 200vh;
-}
-main{
-    padding: 1rem;
-    width: 100%;
-    height: 100%;
-    background:white
+:root{
+    --colorPrimario:rebeccapurple;
+    --colorAdvertencia:rosybrown;
+
+    --tamanoMinimo:3rem;
+    --tamanoMaximo:5rem;
+    --suma:calc(var(--tamanoMinimo) + var(--tamanoMaximo));
 }
 
-p{
-    margin-bottom: 2rem;
-  
+header{
+    
+    width: 100%; 
+    height: 3rem;
+    background: var(--colorprimario,blue);   
 }
 
-.modal{
-    position:fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,.5);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.5s
-}
-
-.modal.active{
-    opacity: 1;
-    pointer-events: initial;
-}
-
-.content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    max-width: 500px;
-    width: 90%;
-    background:white;
-    padding: 1rem;
-    border-radius: 0.25rem;
-    text-align: center;
-}
-
-.content h1,
-.content p {
-    margin: 1rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-li{
-    font-size:1.5em;
-    margin: 1.5px;
-    padding:5px;
-    text-decoration: dotted;
+h2{
+    color:var(--colorppprimario,var(--colorAdvertencia));
 }
 
 p{
-    font-size:1.5em
+    color:var(--colorPrimario);
+}
+
+.div{
+    width: var(--suma);
+    height: var(--tamanoMaximo);
+    background: var(--colorAdvertencia);
 }
