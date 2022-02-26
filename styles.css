@@ -1,21 +1,67 @@
-/* HERENCIA Y CASCADA EN CSS 
+/* diferencia entre sintaxis SASS Y CSS
 
-heredan los elementos de un scope superior
+
 
 */
 
 
-
-body {
-    --color:red;
-    color:var(--color)
+/* SINTAXIS CSS */
+:root{
+    --nombre:red;
+    --valorUno:2rem;
+    --valorDos:5rem;
+    --suma:calc(var(var(--valorUno) + var(--valorDos)))
 }
 
-.conteiner{
-    color: blue;
+h1{
+    color: var(--nombre);
+    height: var(--suma);
+    
 }
 
-.conteiner p{
-    --color:inherit;
-    color:var(--color)
+/* operaciones en CSS */
+
+
+
+
+
+/* SINTAXIS EN SASS
+VARIABLES***************
+
+
+$nombre:red;
+$selector: h1
+
+#{$selector}{
+    color:red
 }
+
+
+h1{
+
+    color:$nombre
+}
+
+SCOPE*******************
+
+P{
+    $variable:blue;
+    a{
+        color:$variable
+    }
+}
+
+calculos******************
+$valorUno;
+$valorDos;
+$suma:$valorUno +$valorDos
+
+#{selector}{
+    color :red;
+    height:$suma;
+}
+
+
+*/
+
+
