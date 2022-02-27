@@ -1,62 +1,73 @@
+/* APLICANDO EL TEMA DEL NAVEGADOR
 
+
+@media(prefers-color-scheme:no-preference/light/dark)
+*/
 :root{
-    --headeraltura:4rem;
-    --headerMargin:1rem;
-    --tamanoFuente:1rem;
-    --tamanoTitulo:2rem;
-    --columnas:2;
-    --mostrarElemento:none;
+    --fondoBody:#FBFBFE;
+    --fondoCard:#FFF;
+    --colorTitulo:black;
+    --colortexto:gray;
+    --fondoFooter:#FCFCFC;
+    --sombra:0 4px 6px rgba(174,192,205,.3);
+
 }
-@media screen and (min-width:1000px){
+
+@media (prefers-color-scheme:dark) {
     :root{
-        --headeraltura:3rem;
-        --headerMargin:2rem;
-        --tamanoFuente:1.25rem;
-        --tamanoTitulo:2.75rem;
-        --columnas:4;
-        --mostrarElemento:block;
+        --fondoBody:#1A252D;
+        --fondoCard:#2A3B47;
+        --colorTitulo:white;
+        --colortexto:lightgray;
+        --fondoFooter:#22303A;
+        --sombra:0 4px 6px rgba(0,0,0,.5);
     }
-
 }
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    margin-top: calc(var(--headeraltura) + var(--headerMargin)) ;
-    font-size: var(--tamanoFuente);
-}
-h1{
-    font-size:var(--tamanoTitulo);
-}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+    background:var(--fondoBody);
 
-
-header{
+}
+.card{
+    overflow: hidden;
+    border-radius: 0.5rem;
+    max-width: 300px;
+    background:var(--fondoCard);
+    box-shadow: var(--sombra);
+    color:var(--colortexto)
+}
+.image{
     width: 100%;
-    height: var(--headeraltura);
-    background: rosybrown;
-    opacity: 0.5;
-    position: fixed;
-    left: 0;
-    top: 0;
 }
 
-main{
-    grid-column-start: span 3;
+.header{
+    position: relative;
+}
+.level{
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    font-weight: 600;
+    color:var(--colortexto)
 }
 
-div{
-    display: grid;
-    grid-template-columns: repeat(var(--columnas), 1fr);
-}
-h2{
-    background: tomato;
+.content{
     padding: 1rem;
 }
-h3{
-    display: var(--mostrarElemento);
+
+.content h3{
+    color: var(--colorTitulo);
+    margin-bottom: 0.5rem;
+}
+
+.footer{
+    padding: 0.75rem 1rem;
+    background: var(--fondoFooter);
 }
