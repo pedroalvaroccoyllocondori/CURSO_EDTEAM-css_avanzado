@@ -1,65 +1,59 @@
-/* CREACION DE SISTEMA DE BOTONES */
+/* PSEUDO ELEMENTOS
 
-:root{
-    --color:tomato;
-    --colorAlternativo:red;
-}
+2 TIPOS
+GENERAN CONTENIDO
 
+pretende ser un elementos
 
-.button.verde{
-    --color:limegreen;
-    --colorAlternativo:green;
-}
+SELECCIONAN UNA PARTE ESPECIFICA DEL CONTENIDO
 
-.button.azul{
-    --color:steelblue;
-    --colorAlternativo:blue;
-}
-
-/* normal */
-
-.button{
-    cursor:pointer;
-    padding: 0.5rem 0.75rem;
-    font-weight: 600;
-    border-radius: 0.25rem;
-    background: var(--color);
-    border:1px solid var(--color);
-    color: antiquewhite;
-}
-
-.button:hover{
-    background:var(--colorAlternativo)
-}
-/* estilo ghost */
-
-.button.ghost{
-    background: transparent;
-    color:var(--color)
-}
-.button.ghost:hover{
-    background: var(--color);
-    color:#fff;
-}
-/* estilo dark */
-.button.dark{
-    background: var(--colorAlternativo);
-}
-.button.dark:hover{
-    background: var(--color);
-}
-/* estilo transparent */
-.button.transparent{
-    background: transparent;
-    border: none;
-    color:var(--color)
-}
-.button.transparent:hover{
-    background: var(--colorAlternativo);
-    color:whitesmoke
-}
-div{
-    margin: 2rem;
-}
+manipulan cuerta partde de contenido de un elemento
 
 
+*/
+
+/* PSEUDOELEMENTOS QUE GENERAN CONTENIDO 
+BEFORE Y AFTER
+
+::before
+::after
+
+NOTA LOS PSUDOELEMENTOS EN CSS SE FIFERENCIAN POR LOS ::
+
+*/
+body{
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+h1::before{
+    content:'antes del elemento';
+    color: rebeccapurple
+}
+
+h1::after{
+    content:'despues del elemento';
+    color: red;
+}
+
+.profesor::before{
+    content:'profesor ';
+    color: blue
+}
+.profesor::after{
+    content: 'github @';
+    color:aqua;
+}
+
+/* UTILIZANDO PSEUDOCLSE EMPTY */
+
+.conteiner{
+    width: 300px;
+    height: 200px;
+    background-color: royalblue;
+}
+/* pseudoclase + pseudoelemento */
+.conteiner:empty::before{
+   content: "el div esta vacio";
+    background-color: rgb(150, 69, 191);
+}
