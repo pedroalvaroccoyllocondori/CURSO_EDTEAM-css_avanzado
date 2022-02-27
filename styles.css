@@ -1,73 +1,65 @@
-/* APLICANDO EL TEMA DEL NAVEGADOR
+/* CREACION DE SISTEMA DE BOTONES */
 
-
-@media(prefers-color-scheme:no-preference/light/dark)
-*/
 :root{
-    --fondoBody:#FBFBFE;
-    --fondoCard:#FFF;
-    --colorTitulo:black;
-    --colortexto:gray;
-    --fondoFooter:#FCFCFC;
-    --sombra:0 4px 6px rgba(174,192,205,.3);
-
-}
-
-@media (prefers-color-scheme:dark) {
-    :root{
-        --fondoBody:#1A252D;
-        --fondoCard:#2A3B47;
-        --colorTitulo:white;
-        --colortexto:lightgray;
-        --fondoFooter:#22303A;
-        --sombra:0 4px 6px rgba(0,0,0,.5);
-    }
+    --color:tomato;
+    --colorAlternativo:red;
 }
 
 
-
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: sans-serif;
-    background:var(--fondoBody);
-
-}
-.card{
-    overflow: hidden;
-    border-radius: 0.5rem;
-    max-width: 300px;
-    background:var(--fondoCard);
-    box-shadow: var(--sombra);
-    color:var(--colortexto)
-}
-.image{
-    width: 100%;
+.button.verde{
+    --color:limegreen;
+    --colorAlternativo:green;
 }
 
-.header{
-    position: relative;
+.button.azul{
+    --color:steelblue;
+    --colorAlternativo:blue;
 }
-.level{
-    position: absolute;
-    bottom: 0.75rem;
-    left: 0.75rem;
+
+/* normal */
+
+.button{
+    cursor:pointer;
+    padding: 0.5rem 0.75rem;
     font-weight: 600;
-    color:var(--colortexto)
+    border-radius: 0.25rem;
+    background: var(--color);
+    border:1px solid var(--color);
+    color: antiquewhite;
 }
 
-.content{
-    padding: 1rem;
+.button:hover{
+    background:var(--colorAlternativo)
+}
+/* estilo ghost */
+
+.button.ghost{
+    background: transparent;
+    color:var(--color)
+}
+.button.ghost:hover{
+    background: var(--color);
+    color:#fff;
+}
+/* estilo dark */
+.button.dark{
+    background: var(--colorAlternativo);
+}
+.button.dark:hover{
+    background: var(--color);
+}
+/* estilo transparent */
+.button.transparent{
+    background: transparent;
+    border: none;
+    color:var(--color)
+}
+.button.transparent:hover{
+    background: var(--colorAlternativo);
+    color:whitesmoke
+}
+div{
+    margin: 2rem;
 }
 
-.content h3{
-    color: var(--colorTitulo);
-    margin-bottom: 0.5rem;
-}
 
-.footer{
-    padding: 0.75rem 1rem;
-    background: var(--fondoFooter);
-}
