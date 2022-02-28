@@ -1,5 +1,5 @@
-/* elementos vacios
-cuando son elemetos vacios se acostumbra poner display block*/
+/* PSEUDOELEMETOS CON VARIABLES CSS*/
+
 
 *{
     margin: 0;
@@ -14,62 +14,42 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: sans-serif;
+    flex-direction: column;
 }
 
-.boton{
-    width: 8rem;
-    height: 7rem;
-    position: relative;
-    cursor: pointer;
-    transition: transform 0.5s;
-}
+ .mensaje{
+     --colorFondo:tomato;
+     --mensaje:'esto es un mensaje peronalizado';
+     --icono:'🤑🤑🤑';
+     background: var(--colorFondo);
+     color: white;
+     padding: .2rem .5rem;
+     border-radius: .75rem;
+     margin-bottom: 2rem;
+    
 
-.boton::before,
-.boton::after{
-    content: '';
-    display: block;
+ }
 
-}
+ .mensaje::before{
+     content: var(--icono);
 
-.boton::before,
-.boton::after,
-.linea{
-    position: absolute;
-   width: 100%;
-   height: 1rem;
-   background: black;
-}
+ }
+ .mensaje::after{
+     content: var(--mensaje);
+ }
 
 
-.linea{
-    top: 50%;
-    transform: translateY(-50%);
-}
+ /*  */
 
-.boton::after{
-    top: 0;
-}
-.boton::before{
-    bottom: 0;
-}
+ .mensaje.alerta{
+    --colorFondo:goldenrod;
+    --mensaje:'esto es un mensaje de alerta';
+    --icono:'🙀🙀🙀';
+ }
 
-/* boton al momento de realizar el click */
-
-.boton.activo{
-    transform:rotate(180deg)
-}
-
-.boton.activo .linea{
-    display: none;
-}
-
-.boton.activo::before{
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
-}
-.boton.activo::after {
-    top: 35%;
-    transform:translateY(50%) rotate(-45deg);
-}
-
-
+ /*  */
+ .mensaje.exito{
+    --colorFondo:rebeccapurple;
+    --mensaje:'esto es un mensaje de exito';
+    --icono:'😁😁😁';
+ }
