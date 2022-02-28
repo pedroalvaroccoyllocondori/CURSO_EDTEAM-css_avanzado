@@ -1,55 +1,43 @@
 /* estructura y tipo de listas
 manejar los estilos de lista desde css
 
+list-estile-position:outset/inside     outside viene por defecto
 
-estilos de lista desde css
-display:list-item; position
+manipular los estilos de la viñeta
 
 
-despararecer estilo de lista desde css
-diferentes estilos de lista AGREGANDO IMAGENT
-list-style-image:url()
-NOTA : CUANDO AGREGAMOS IMAGENES NO SE PUEDEN MODIFICAR SU TAMAÑO
 */
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-size:1rem;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: sans-serif;
-    flex-direction: column;
-}
-div{
-    display: list-item;
-    list-style-image: url(https://uc-emoji.azureedge.net/orig/69/8620de0f9f586e3bd6670bc0612bf1.png);
+
+
+ul, ol{
+    outline: 1px solid red;
+    padding-left: 0;
+    list-style-position: inside;
     
 }
 
-ul, ol{
-    list-style-type: none;
 
-}
 
 li{
-    display: flex;
+    outline: 1px solid green;
 }
-li::before{
+
+li li{
+    outline: 1px solid rebeccapurple;
+    width: 100%;
+
+}
+/* li::before{
     content: '';
     width: 2rem;
     height: 2rem;
-    display:block;
+    display:inline-block;
     background: url(https://uc-emoji.azureedge.net/orig/29/ec43ad26487fa68b54bfe749447ac6.png);
     background-size: contain;
-}
+} */
 
 
 
