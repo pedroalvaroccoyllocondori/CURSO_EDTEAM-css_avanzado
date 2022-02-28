@@ -13,32 +13,14 @@ manipular los estilos de la viñeta
 
 
 ul, ol{
-    outline: 1px solid red;
-    padding-left: 0;
     list-style-position: inside;
     
 }
 
 
 
-li{
-    outline: 1px solid green;
+li::marker{
+    content: '\2746';
+   color: goldenrod;
 }
-
-li li{
-    outline: 1px solid rebeccapurple;
-    width: 100%;
-
-}
-/* li::before{
-    content: '';
-    width: 2rem;
-    height: 2rem;
-    display:inline-block;
-    background: url(https://uc-emoji.azureedge.net/orig/29/ec43ad26487fa68b54bfe749447ac6.png);
-    background-size: contain;
-} */
-
-
-
 
