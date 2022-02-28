@@ -1,6 +1,4 @@
-/* pseudoelemnetos para seleccionar contenido
-::selection
-SELECCIONA agrega estilos a la seleccion solo bacground-color 
+/* estructura y tipo de listas
 */
 
 
@@ -19,37 +17,6 @@ body {
     font-family: sans-serif;
     flex-direction: column;
 }
-p{
-    --color:goldenrod;
-    margin-bottom: 1rem;
-}
-
-p::selection{
-    background-color: var(--color);
-    color: antiquewhite;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
-}
-
-
-p::first-letter{
-    color: goldenrod;
-    font-size:3rem;
-    font-weight:800;
-    float: left;
-    line-height:0.7;
-    font-family: serif;
-}
-
-p:hover::first-letter{
-    color: var(--color);
-}
-
-p:nth-child(1){
-    --color:green;
-}
-p:nth-child(2){
-    --color:rebeccapurple;
-}
-p:nth-child(3){
-    --color:aqua;
+div{
+    display: list-item;
 }
