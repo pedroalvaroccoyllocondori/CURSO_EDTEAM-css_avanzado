@@ -12,48 +12,73 @@ manipulan cuerta partde de contenido de un elemento
 
 */
 
-/* PSEUDOELEMENTOS QUE GENERAN CONTENIDO 
-BEFORE Y AFTER
-
-::before
-::after
+/* PSEUDOELEMENTOS QUE GENERAN ELEMENTOS 
 
 NOTA LOS PSUDOELEMENTOS EN CSS SE FIFERENCIAN POR LOS ::
 
+IMPRESION DE ATRIBUTOS
 */
+
 body{
     font-size: 2rem;
     font-family: sans-serif;
 }
 
-h1::before{
-    content:'antes del elemento';
-    color: rebeccapurple
-}
-
-h1::after{
-    content:'despues del elemento';
+p::before{
+    content: attr(data-codigo);
     color: red;
 }
 
-.profesor::before{
-    content:'profesor ';
-    color: blue
-}
-.profesor::after{
-    content: 'github @';
-    color:aqua;
+p::after{
+    content: attr(data-dinero);
+    color: red;
 }
 
-/* UTILIZANDO PSEUDOCLSE EMPTY */
+
+img{
+    width:25rem;
+    display: block;
+}
 
 .conteiner{
-    width: 300px;
-    height: 200px;
-    background-color: royalblue;
+    position: relative;
+    color: aliceblue;
 }
-/* pseudoclase + pseudoelemento */
-.conteiner:empty::before{
-   content: "el div esta vacio";
-    background-color: rgb(150, 69, 191);
+
+
+.conteiner::before,
+.conteiner::after{
+    transform: scale(0);
+}
+
+
+
+.conteiner::before{
+    transition: transform 0.5s;
+    opacity: 1;
+    content: attr(data-nombre);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 25rem;
+    height: 100%;
+    background: rgba(0, 0 , 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner::after{
+    content:'nivel - ' attr(data-nivel);
+    position: absolute;
+    width: 25rem;
+    bottom:0;
+    text-align: center;
+    opacity: 0.5;
+}
+
+
+.conteiner:hover::before,
+.conteiner:hover::after{
+    transform:scale(1);
 }
