@@ -1,26 +1,20 @@
-/* estructura y tipo de listas
-manejar los estilos de lista desde css
-
-list-estile-position:outset/inside     outside viene por defecto
-
-manipular los estilos de la viñeta
-
+/*CONTADORES
 
 */
 
-
-
-
-
-ul, ol{
-    list-style-position: inside;
-    
+body{
+    font-size: 2rem;
 }
 
-
-
-li::marker{
-    content: '\2746';
-   color: goldenrod;
+ul{
+    counter-reset:contador 115;
+    list-style-type: none;
 }
 
+li{
+    counter-increment: contador 100;
+}
+
+li::before {
+    content: counter(contador,upper-roman) '. ';
+}
