@@ -11,7 +11,7 @@ SELECCIONA LA PRIARA LINEA SIN DIFERENCIAR EL CONTENIDO
 }
 
 body {
-    font-size:3rem;
+    font-size:1rem;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,30 @@ body {
     font-family: sans-serif;
     flex-direction: column;
 }
+p{
+    --color:goldenrod;
+    margin-bottom: 1rem;
+}
 
-p::first-line{
-    color: rebeccapurple
+p::first-letter{
+    color: goldenrod;
+    font-size:3rem;
+    font-weight:800;
+    float: left;
+    line-height:0.7;
+    font-family: serif;
+}
+
+p:hover::first-letter{
+    color: var(--color);
+}
+
+p:nth-child(1){
+    --color:green;
+}
+p:nth-child(2){
+    --color:rebeccapurple;
+}
+p:nth-child(3){
+    --color:aqua;
 }
