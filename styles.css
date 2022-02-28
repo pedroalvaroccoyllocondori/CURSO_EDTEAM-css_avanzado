@@ -1,84 +1,14 @@
-/* PSEUDO ELEMENTOS
+/* caracteres unicode
+son un tipo de caracteres especiales */
 
-2 TIPOS
-GENERAN CONTENIDO
-
-pretende ser un elementos
-
-SELECCIONAN UNA PARTE ESPECIFICA DEL CONTENIDO
-
-manipulan cuerta partde de contenido de un elemento
-
-
-*/
-
-/* PSEUDOELEMENTOS QUE GENERAN ELEMENTOS 
-
-NOTA LOS PSUDOELEMENTOS EN CSS SE FIFERENCIAN POR LOS ::
-
-IMPRESION DE ATRIBUTOS
-*/
-
-body{
-    font-size: 2rem;
-    font-family: sans-serif;
+p{
+    quotes:'\275D' '\275E';
+    font-size:5rem
 }
 
 p::before{
-    content: attr(data-codigo);
-    color: red;
+    content: open-quote;
 }
-
 p::after{
-    content: attr(data-dinero);
-    color: red;
-}
-
-
-img{
-    width:25rem;
-    display: block;
-}
-
-.conteiner{
-    position: relative;
-    color: aliceblue;
-}
-
-
-.conteiner::before,
-.conteiner::after{
-    transform: scale(0);
-}
-
-
-
-.conteiner::before{
-    transition: transform 0.5s;
-    opacity: 1;
-    content: attr(data-nombre);
-    position: absolute;
-    top:0;
-    left:0;
-    width: 25rem;
-    height: 100%;
-    background: rgba(0, 0 , 0, .5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.conteiner::after{
-    content:'nivel - ' attr(data-nivel);
-    position: absolute;
-    width: 25rem;
-    bottom:0;
-    text-align: center;
-    opacity: 0.5;
-}
-
-
-.conteiner:hover::before,
-.conteiner:hover::after{
-    transform:scale(1);
+    content: close-quote;
 }
