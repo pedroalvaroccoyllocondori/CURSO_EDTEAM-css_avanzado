@@ -1,14 +1,29 @@
-/* caracteres unicode
-son un tipo de caracteres especiales */
+/* imagenes
+MOTA PARA INSERTAR IMAGENES CON PSEUDOELEMNTOS ES RECOMENDABLE HACERLA MEDIANTE FONDOS*/
 
-p{
-    quotes:'\275D' '\275E';
-    font-size:5rem
+body {
+    font-size:3rem
 }
 
-p::before{
-    content: open-quote;
+.user{
+    display: flex;
 }
-p::after{
-    content: close-quote;
+
+.user::after{
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    background:url(https://cdn-icons.flaticon.com/png/128/5372/premium/5372943.png?token=exp=1646021016~hmac=5dd98a22e4739a62c932141f1fbe1c7f);
+    background-size: contain;
+}
+
+.user.venezuela::after{
+    background: url(https://cdn-icons.flaticon.com/png/128/4855/premium/4855902.png?token=exp=1646021695~hmac=32fc601bcddafe7216aedb6e3b86b427);
+    background-size: contain;
+}
+
+.user.ucrania::after{
+    background: url(https://cdn-icons.flaticon.com/png/128/4628/premium/4628718.png?token=exp=1646021880~hmac=7622c92ade71d5f0848843176d4260a4);
+    background-size: contain;
 }
