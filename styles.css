@@ -1,6 +1,6 @@
 /* pseudoelemnetos para seleccionar contenido
-::first-line
-SELECCIONA LA PRIARA LINEA SIN DIFERENCIAR EL CONTENIDO
+::selection
+SELECCIONA agrega estilos a la seleccion solo bacground-color 
 */
 
 
@@ -23,6 +23,13 @@ p{
     --color:goldenrod;
     margin-bottom: 1rem;
 }
+
+p::selection{
+    background-color: var(--color);
+    color: antiquewhite;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+
 
 p::first-letter{
     color: goldenrod;
