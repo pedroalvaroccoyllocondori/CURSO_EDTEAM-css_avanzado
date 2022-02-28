@@ -1,4 +1,14 @@
 /* estructura y tipo de listas
+manejar los estilos de lista desde css
+
+
+estilos de lista desde css
+display:list-item; position
+
+
+despararecer estilo de lista desde css
+list-style-type:none/circle/decimal/upper-roman
+diferentes estilos de lista
 */
 
 
@@ -19,4 +29,21 @@ body {
 }
 div{
     display: list-item;
+    
 }
+/* SIMBOLOS--solo firefox
+
+
+estilo de lista ciclico
+ul, ol{
+    list-style-type: symbols(cyclic 'a' 'b' 'c');
+}
+
+*/
+ul, ol{
+    list-style-type: upper-roman;
+}
+
+
+
+
