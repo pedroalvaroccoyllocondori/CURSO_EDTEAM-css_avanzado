@@ -6,15 +6,16 @@ body{
     font-size: 2rem;
 }
 
-ul{
-    counter-reset:contador 115;
-    list-style-type: none;
+
+ol{
+    list-style: none;
+    counter-reset:contador;/*declaracion del contador*/
 }
 
 li{
-    counter-increment: contador 100;
+    counter-increment: contador;/*incremento de contadores*/
 }
 
-li::before {
-    content: counter(contador,upper-roman) '. ';
+li::before{
+    content:counters(contador,' .',upper-roman) ' ';/*formato del contador*/
 }
