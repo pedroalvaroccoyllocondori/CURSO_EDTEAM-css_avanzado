@@ -7,8 +7,9 @@ display:list-item; position
 
 
 despararecer estilo de lista desde css
-list-style-type:none/circle/decimal/upper-roman
-diferentes estilos de lista
+diferentes estilos de lista AGREGANDO IMAGENT
+list-style-image:url()
+NOTA : CUANDO AGREGAMOS IMAGENES NO SE PUEDEN MODIFICAR SU TAMAÑO
 */
 
 
@@ -29,19 +30,25 @@ body {
 }
 div{
     display: list-item;
+    list-style-image: url(https://uc-emoji.azureedge.net/orig/69/8620de0f9f586e3bd6670bc0612bf1.png);
     
 }
-/* SIMBOLOS--solo firefox
 
-
-estilo de lista ciclico
 ul, ol{
-    list-style-type: symbols(cyclic 'a' 'b' 'c');
+    list-style-type: none;
+
 }
 
-*/
-ul, ol{
-    list-style-type: upper-roman;
+li{
+    display: flex;
+}
+li::before{
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    display:block;
+    background: url(https://uc-emoji.azureedge.net/orig/29/ec43ad26487fa68b54bfe749447ac6.png);
+    background-size: contain;
 }
 
 
