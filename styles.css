@@ -1,4 +1,7 @@
-/* PSEUDOELEMETOS CON VARIABLES CSS*/
+/* pseudoelemnetos para seleccionar contenido
+::first-line
+SELECCIONA LA PRIARA LINEA SIN DIFERENCIAR EL CONTENIDO
+*/
 
 
 *{
@@ -17,39 +20,6 @@ body {
     flex-direction: column;
 }
 
- .mensaje{
-     --colorFondo:tomato;
-     --mensaje:'esto es un mensaje peronalizado';
-     --icono:'🤑🤑🤑';
-     background: var(--colorFondo);
-     color: white;
-     padding: .2rem .5rem;
-     border-radius: .75rem;
-     margin-bottom: 2rem;
-    
-
- }
-
- .mensaje::before{
-     content: var(--icono);
-
- }
- .mensaje::after{
-     content: var(--mensaje);
- }
-
-
- /*  */
-
- .mensaje.alerta{
-    --colorFondo:goldenrod;
-    --mensaje:'esto es un mensaje de alerta';
-    --icono:'🙀🙀🙀';
- }
-
- /*  */
- .mensaje.exito{
-    --colorFondo:rebeccapurple;
-    --mensaje:'esto es un mensaje de exito';
-    --icono:'😁😁😁';
- }
+p::first-line{
+    color: rebeccapurple
+}
