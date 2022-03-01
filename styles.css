@@ -1,32 +1,43 @@
+/* espacio en blanco WHITE-SPACE
+controlar espacios en blanco y salto de linea en
+nornal---contenido normal colapsado segun el contenedor 
+nowrap-->contenido en una sola linea
+pre---->contenido que respeta el salto de linea y espacio en blanco pero no el desbordamiento
+pre-wrap--->resptea el salto de linea y espacio en blanco y acomoada e desbordamiento
+pre-line --->respeta el sato de line y desbordamiento pero no los espcios en blanco
 
-/* insertando fuentes */
+ */
 
-@font-face {
-  font-family:'titulo' ;
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: local('kaushanscript-regular') ,local('kaushanscript'),url('fuente/kaushanscript-regular.woff2') format('woff2');
-}
-@font-face {
-  font-family:'cuerpo' ;
-  font-style: normal;
-  font-display: optional;
-  font-weight: 400;
-  src: local('alexbrush') ,local('alexbrush-regular'),url('fuente/alexbrush-regular.woff2') format('woff2');
-}
+ body {
+   font-family:Arial, Helvetica, sans-serif
+ }
+ p{
+   background:steelblue;
+   max-width: 600px;
+ }
 
-:root{
-  --titutlo:'titulo', cursive ;
-  --cuerpo:'cuerpo', cursive ;
-}
+ p::before{
+   content:attr(class);
+   display: block;
+   text-align: center;
+   font-weight: 600;
+   margin-bottom: 0.5rem;
+ }
 
-body{
-  font-family:var(--cuerpo)
-}
+ /* espacio en blanco */
 
-
-h1,h2,h3{
-  font-family: var(--titutlo);
-}
-
+ .espacio-blanco .normal{
+   white-space: normal;
+ }
+ .espacio-blanco .nowrap{
+   white-space: nowrap;
+ }
+ .espacio-blanco .pre{
+   white-space: pre;
+ }
+ .espacio-blanco .pre-wrap{
+   white-space: pre-wrap;
+ }
+ .espacio-blanco .pre-line{
+   white-space: pre-line;
+ }
