@@ -1,84 +1,43 @@
-/*CONTADORES
+/* 
+FUENTES PARA LA WEB
+formato de fuentes
+
+TTF(true type font)
+OTF(open true type font)
+EOT(embedded open type font)
+WOFF WOFF(web ope font format)
+SVG (scalable vector graphics)
+
+
+IMPORTANDO TIPOGRAFIAS CSS
 
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Rubik:ital,wght@0,300;1,800&family=Sarpanch:wght@900&display=swap');
+
+
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height:100vh
-}
-
-.calculadora{
-    border: 1px solid tomato;
-    border-radius:0.5rem;
-    width: 200px;
-    counter-reset: suma;
-    overflow: hidden;
-    transform: scale(2);
-    display: flex;
-    flex-direction: column;
-
-}
-
-.resultado{
-    background:steelblue;
-    color:white;
-    text-align:right;
-    padding-right: 0.5rem;
-    font-weight: bold;
-    order: -1;
-}
-
-.resultado::before{
-    content:counter(suma);
-}
-
-.numeros{
-    order:1;
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
-
-}
-label{
-    cursor: pointer;
-    border: 1px solid gray;
-    text-align: center;
-}
-
-input{
-    opacity: 0;
-    position: absolute;
-}
-
-input:checked +label{
-    color:red
+    font-family: 'Brush';
+  
 }
 
 
-input:nth-of-type(1):checked{
-    counter-increment:suma 1;
-}
-input:nth-of-type(2):checked{
-    counter-increment:suma 2;
-}
-input:nth-of-type(3):checked{
-    counter-increment:suma 3;
-}
-input:nth-of-type(4):checked{
-    counter-increment:suma 4;
-}
-input:nth-of-type(5):checked{
-    counter-increment:suma 5;
-}
-input:nth-of-type(6):checked{
-    counter-increment:suma 6;
-}
-input:nth-of-type(7):checked{
-    counter-increment:suma 7;
-}
-input:nth-of-type(8):checked{
-    counter-increment:suma 8;
-}
-input:nth-of-type(9):checked{
-    counter-increment:suma 9;
-}
+@font-face {
+    font-family: 'Brush';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: local('Alex Brush') ,local('Alex Brush Regular'), url('fuente/AlexBrush-Regular.ttf');
+  }
+
+
+/* 
+@font-face {
+    font-family: 'Sarpanch';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/sarpanch/v9/hES16Xt4NCpRuk6PziUEaZ7Z3nAeRA.woff2) format('woff2');
+    unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
+  } */
