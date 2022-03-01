@@ -11,6 +11,15 @@ SVG (scalable vector graphics)
 
 IMPORTANDO TIPOGRAFIAS CSS
 
+font-display:auto/block/swap/fallback/optional
+permite elegir el comportamiento cuando se imprimen en pantalla el
+
+auto--muestra el contenido de la fuente normal y espra a la descarga e implementacion de la otra fuente
+block --analogo a auto en propiedades no muestra el contenido de la fuente hasta completar con la descarga
+swap --->primero muestra la fuente alternativa y despuesde descargar realiza el cambio
+fallback --por una breve lapso de timepo no muestra el contenido cuando finaliza la descarga de tiempo se relaiza el cambio
+optional--->para usuarios con bajo rendimiento muestra  la fuente alternativa en vez de la original
+
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Rubik:ital,wght@0,300;1,800&family=Sarpanch:wght@900&display=swap');
@@ -18,16 +27,17 @@ IMPORTANDO TIPOGRAFIAS CSS
 
 
 body {
-    font-family: 'Brush';
+    font-family: 'Brush',cursive;
+    font-size: 2rem;
   
 }
 
 
 @font-face {
+    font-display: optional;
     font-family: 'Brush';
     font-style: normal;
     font-weight: 900;
-    font-display: swap;
     src: local('Alex Brush') ,local('Alex Brush Regular'), url('fuente/AlexBrush-Regular.ttf');
   }
 
