@@ -1,4 +1,23 @@
-/* espacio en blanco WHITE-SPACE
+/* espacio en blanco
+
+hypherns---->cortarlas palbras añadiendole un gion
+none-->no ejecuta salto de linea con guion en la palabra
+auto-->ejecuta salto de linea con guion en la palabra
+
+OVERFLOW-WRAP--->desbordamiento de palabras
+normal--->no hace un salto de linea cuando se debordamiento
+anywhere--->cuando  la palabra se desborda hace un salto de linea en cualquier lugat
+break-word--->cuando la palabra se deborda hace un salto de linea en el intermedio
+
+
+
+WORD-BREAK--->debordamiento en palabras largaa
+normal--->acomada la palabra para que haga un salto de linea sin romper la palabra
+break-all--->acomada la palabra para que haga un salto de linea rompiendo la palabra
+
+
+
+WHITE-SPACE
 controlar espacios en blanco y salto de linea en
 nornal---contenido normal colapsado segun el contenedor 
 nowrap-->contenido en una sola linea
@@ -23,6 +42,43 @@ pre-line --->respeta el sato de line y desbordamiento pero no los espcios en bla
    font-weight: 600;
    margin-bottom: 0.5rem;
  }
+
+
+ /* hypherns */
+ .hypherns .none{
+  hyphens:none
+}
+ .hypherns .manual{
+  hyphens:manual
+}
+ .hypherns .auto{
+  hyphens:auto;
+}
+
+/* overflow-wrap */
+.overflow-wrap .normal{
+  overflow-wrap: normal;
+}
+.overflow-wrap .anywhere{
+  overflow-wrap: anywhere;
+}
+.overflow-wrap .break-word{
+  overflow-wrap: break-word;
+}
+
+
+
+/* word-break */
+.word-break .normal{
+  word-break:normal
+}
+.word-break .break-all{
+  word-break:break-all;
+}
+
+
+
+
 
  /* espacio en blanco */
 
