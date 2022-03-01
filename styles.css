@@ -1,53 +1,32 @@
-/* 
-FUENTES PARA LA WEB
-formato de fuentes
 
-TTF(true type font)
-OTF(open true type font)
-EOT(embedded open type font)
-WOFF WOFF(web ope font format)
-SVG (scalable vector graphics)
+/* insertando fuentes */
 
+@font-face {
+  font-family:'titulo' ;
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: local('kaushanscript-regular') ,local('kaushanscript'),url('fuente/kaushanscript-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family:'cuerpo' ;
+  font-style: normal;
+  font-display: optional;
+  font-weight: 400;
+  src: local('alexbrush') ,local('alexbrush-regular'),url('fuente/alexbrush-regular.woff2') format('woff2');
+}
 
-IMPORTANDO TIPOGRAFIAS CSS
+:root{
+  --titutlo:'titulo', cursive ;
+  --cuerpo:'cuerpo', cursive ;
+}
 
-font-display:auto/block/swap/fallback/optional
-permite elegir el comportamiento cuando se imprimen en pantalla el
-
-auto--muestra el contenido de la fuente normal y espra a la descarga e implementacion de la otra fuente
-block --analogo a auto en propiedades no muestra el contenido de la fuente hasta completar con la descarga
-swap --->primero muestra la fuente alternativa y despuesde descargar realiza el cambio
-fallback --por una breve lapso de timepo no muestra el contenido cuando finaliza la descarga de tiempo se relaiza el cambio
-optional--->para usuarios con bajo rendimiento muestra  la fuente alternativa en vez de la original
-
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Rubik:ital,wght@0,300;1,800&family=Sarpanch:wght@900&display=swap');
-
-
-
-body {
-    font-family: 'Brush',cursive;
-    font-size: 2rem;
-  
+body{
+  font-family:var(--cuerpo)
 }
 
 
-@font-face {
-    font-display: optional;
-    font-family: 'Brush';
-    font-style: normal;
-    font-weight: 900;
-    src: local('Alex Brush') ,local('Alex Brush Regular'), url('fuente/AlexBrush-Regular.ttf');
-  }
+h1,h2,h3{
+  font-family: var(--titutlo);
+}
 
-
-/* 
-@font-face {
-    font-family: 'Sarpanch';
-    font-style: normal;
-    font-weight: 900;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/sarpanch/v9/hES16Xt4NCpRuk6PziUEaZ7Z3nAeRA.woff2) format('woff2');
-    unicode-range: U+0900-097F, U+1CD0-1CF6, U+1CF8-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC, U+A830-A839, U+A8E0-A8FB;
-  } */
