@@ -3,19 +3,23 @@
 */
 
 body{
-    font-size: 2rem;
+    counter-reset:capitulo
 }
 
-
-ol{
-    list-style: none;
-    counter-reset:contador;/*declaracion del contador*/
+section{
+    counter-increment: capitulo;
+    counter-reset:subcapitulo;
 }
 
-li{
-    counter-increment: contador;/*incremento de contadores*/
+p{
+    counter-increment:subcapitulo;
 }
 
-li::before{
-    content:counters(contador,' .',upper-roman) ' ';/*formato del contador*/
+p::before{
+    content: counter(capitulo)'.'counter(subcapitulo) ' ';
+    font-weight: 800;
+}
+
+h2::after{
+    content: ' N°' counter(capitulo)
 }
