@@ -1,99 +1,28 @@
-/* espacio en blanco
+/* TABLAS
 
-hypherns---->cortarlas palbras añadiendole un gion
-none-->no ejecuta salto de linea con guion en la palabra
-auto-->ejecuta salto de linea con guion en la palabra
+REPLICANDO COMPORTAMKENTO DE LA TABLA CON DIV Y CSS
+*/
 
-OVERFLOW-WRAP--->desbordamiento de palabras
-normal--->no hace un salto de linea cuando se debordamiento
-anywhere--->cuando  la palabra se desborda hace un salto de linea en cualquier lugat
-break-word--->cuando la palabra se deborda hace un salto de linea en el intermedio
-
-
-
-WORD-BREAK--->debordamiento en palabras largaa
-normal--->acomada la palabra para que haga un salto de linea sin romper la palabra
-break-all--->acomada la palabra para que haga un salto de linea rompiendo la palabra
-
-
-
-WHITE-SPACE
-controlar espacios en blanco y salto de linea en
-nornal---contenido normal colapsado segun el contenedor 
-nowrap-->contenido en una sola linea
-pre---->contenido que respeta el salto de linea y espacio en blanco pero no el desbordamiento
-pre-wrap--->resptea el salto de linea y espacio en blanco y acomoada e desbordamiento
-pre-line --->respeta el sato de line y desbordamiento pero no los espcios en blanco
-
- */
-
- body {
-   font-family:Arial, Helvetica, sans-serif
- }
- p{
-   background:steelblue;
-   max-width: 600px;
- }
-
- p::before{
-   content:attr(class);
-   display: block;
-   text-align: center;
-   font-weight: 600;
-   margin-bottom: 0.5rem;
- }
-
-
- /* hypherns */
- .hypherns .none{
-  hyphens:none
+.table{
+  display: table;
+  border:1px solid red;
 }
- .hypherns .manual{
-  hyphens:manual
-}
- .hypherns .auto{
-  hyphens:auto;
+.caption{
+  display: table-caption;
 }
 
-/* overflow-wrap */
-.overflow-wrap .normal{
-  overflow-wrap: normal;
-}
-.overflow-wrap .anywhere{
-  overflow-wrap: anywhere;
-}
-.overflow-wrap .break-word{
-  overflow-wrap: break-word;
+.thead{
+  display: table-header-group;
 }
 
-
-
-/* word-break */
-.word-break .normal{
-  word-break:normal
+.tr{
+  display: table-row;
 }
-.word-break .break-all{
-  word-break:break-all;
+.td{
+  display: table-cell;
 }
 
-
-
-
-
- /* espacio en blanco */
-
- .espacio-blanco .normal{
-   white-space: normal;
- }
- .espacio-blanco .nowrap{
-   white-space: nowrap;
- }
- .espacio-blanco .pre{
-   white-space: pre;
- }
- .espacio-blanco .pre-wrap{
-   white-space: pre-wrap;
- }
- .espacio-blanco .pre-line{
-   white-space: pre-line;
- }
+.tfoot{
+  display: table-footer-group;
+ 
+}
