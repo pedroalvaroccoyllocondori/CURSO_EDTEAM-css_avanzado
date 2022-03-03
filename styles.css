@@ -2,52 +2,67 @@
 
 FORMULARIOS
 
-estilos textare
 
-both--->ambos lados
-none--->no hay redimension
-vertival--->redimensionamiento vertical
-horizontal--reminensionamirnto horizontal
+SPEUDOCLASES para detectar el foco
 
-NO SOPORTADO POR TODOS LOS NAVEGADORES
+:focus------->foco directo del elemento
+:focus-within------>foco de un elemeto hijo a un padre
+
+foco del elemento
+
 */
 
 
 
 *{
   font-family:sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  min-height: 100vh;
+}
+
+input:focus{
+  background-color: lawngreen;
+  color: white
+}
+
+form{
+  padding: 2rem;
 }
 
 
-textarea{
-  resize:vertical;
+/* + selecciona a los hermanos de un elemento */
+form:focus-within + .conteiner{
+  background: slategray;
 }
-
-p{
-  resize: both;
-  overflow: scroll;
-  outline:1px solid limegreen;
-}
-
-
-/* 
-
-input[type="text"]{
-  background: red;
-  -moz-appearance:none;
+.conteiner{
+  height: 12rem;
+  width: 12rem;
+  background: royalblue;
 }
 
 
+/* PLACEHOLDER CON CSS */
 
-input[type="checkbox"]::before{
-  content:'';
-  width: 1rem;
-  height: 1rem;
-  background:blue;
-  display: block;
+
+.contenedor2{
+position: relative;
 }
 
-input[type="checkbox"]:checked +label{
-background:red;
-} */
+.contenedor2 label{
+  position: absolute;
+  left: .25rem;
+  opacity: 0.5;
+}
 
+.contenedor2:focus-within label{
+  display: none;
+}
