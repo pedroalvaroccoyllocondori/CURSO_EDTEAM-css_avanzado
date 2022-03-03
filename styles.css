@@ -14,23 +14,64 @@ REPLICANDO COMPORTAMKENTO DE LA TABLA CON DIV Y CSS
   font-family:sans-serif;
 }
 
-
-table,td,tr,th {
-  border: 2px solid rebeccapurple
-}
-table:nth-of-type(1) {
-  border-collapse: collapse;
-  border-spacing:1rem 0.1rem;
-  table-layout:fixed;/*auto viene por defecto*/
-  width: 100%;
+:root{
+  --colorHead:rgb(25, 27, 151);
+  --filaPar:#e1e6f8;
+  --filaImpar:#c3cdff;
+  --colorBorde:#a8afcc;
+  
 }
 
+table tr td,th:not(.th-head){
+  border-right: 1px solid var(--colorBorde);
+}
 
-td{
-  /* white-space: nowrap; */
+table,tfoot{
+  border:1px solid var(--colorBorde);
   word-break: break-all;
+
 }
 
 table:nth-of-type(1) caption {
   font-weight: 800;
+}
+
+
+table {
+  border-collapse: collapse;
+  border-spacing:1rem 0.1rem;
+  table-layout:fixed;/*auto viene por defecto*/
+  width: 100%;
+  empty-cells: hide;
+}
+
+thead{
+  color:white;
+  background:var(--colorHead) ;
+}
+thead th{
+  /* border: none; */
+}
+
+table tbody tr:not(tfoot):nth-child(odd) {
+	background: var(--filaPar);
+}
+table tbody tr:nth-child(even) {
+	background: var(--filaImpar);
+}
+
+tr:not(.tr-head):hover{
+  background:rgb(130, 130, 130);
+}
+td:hover{
+  background:rgb(126, 126, 126);
+
+}
+
+td{
+text-align: right;
+}
+
+th{
+  text-align:left;
 }
