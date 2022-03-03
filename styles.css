@@ -35,28 +35,94 @@ SPEUDOCLASES FORMULARIOS
   box-sizing: border-box;
 }
 
+:root{
+  --color:steelblue;
+}
 body{
   display:flex;
   justify-content:center;
   align-items:center;
   flex-direction:column;
   min-height: 100vh;
+  background:var(--color);
+  font-family: serif;
+}
+
+h2{
+  color: var(--color);
 }
 
 
-input:not(.boton):valid{
-  background: rgb(148, 201, 148);
-  color: aliceblue;
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 500px;
+}
+fieldset{
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+legend{
+  font-weight: 400;
+}
+
+
+.conteiner{
+  display: flex;
+  flex-direction:column;
+  flex-grow: 1;
+}
+.conteiner label{
+  font-size:0.75rem;
+  order:-1;
+  margin-bottom:0.25rem;
+}
+.conteiner input{
+  border: 1px solid #ddd;
+  border-radius:0.2rem;
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+}
+
+/* estilos de boton */
+
+input[type="submit"]{
+  color: white;
+  background:var(--color);
+  border: none;
+  padding: 0.5rem;
+}
+
+.conteiner input:focus +label{
+  color: var(--color);
+}
+
+
+/* estilos subcontenedores */
+.sub-conteiner{
+  display: flex;
+  flex-grow: 1;
+  gap:1rem;
+  flex-basis: 40%;
+  flex-direction: column;
+
+}
+
+fieldset:focus-within legend{
+  color: var(--color);
+  font-weight:bold;
+}
+
+
+input:not(input[type="submit"]):valid{
+  /* background: rgb(148, 201, 148);
+  color: aliceblue; */
   
-}
-input:invalid{
-  background: red;
-  color: aliceblue;
-}
-input::placeholder{
-  color:royalblue;
-  opacity: 0.5;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  word-spacing: 2px;
 }

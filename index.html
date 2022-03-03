@@ -10,29 +10,49 @@
 </head>
 <body>
 
+<!-- fielset --aplica todos los atributos a los hijos del formulario -->
 
-    <form action="#">
-        <div class="contenedor3">
-            <label for="">nombre</label>
-            <!-- pattern se envia una expresion regular -->
-            <input type="text" placeholder="escriba su nombre" minlength="5" pattern="([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*"> 
-        </div>
-        <div class="contenedor3">
-            <label for="">apellido</label>
-            <input type="text" placeholder="escriba su apellido" pattern="([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*"> 
-        </div>
-        <div class="contenedor3">
-            <label for="">email</label>
-            <input type="email" placeholder="escriba correo"  pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"> 
-        </div>
-        <input type="submit" class="boton"  value="enviar formulario ">
-    </form>
- 
+<form action="#">
 
 
+    <h2>formulario de registro</h2>
+    <!-- datos de la cuenta -->
+    <fieldset class="fila">
+        <legend>Datos de la cuenta de usuario</legend>
+        <div class="conteiner">
+            <input type="text" class="nombre" id="nombre">
+            <label for="nombre">Nombre</label>
+        </div>
+        <div class="conteiner">
+            <input type="text" class="apellido" id="apellido">
+            <label for="apellido">apellido</label>
+        </div>
+        <div class="conteiner">
+            <input type="email" class="email" id="email">
+            <label for="email">Email</label>
+        </div>
+        
+    </fieldset>
+    <fieldset class="fila">
+        <!-- informacion del usuario -->
+        <legend>informacion del usuario</legend>
+        <div class="sub-conteiner">
+            <div class="conteiner">
+                <input type="text" class="numero" id="numero">
+                <label for="numero">Numero</label>
+            </div>
+            <div class="conteiner">
+                <input type="text" class="postal" id="postal">
+                <label for="postal">C.P.</label>
+            </div>
+        </div>
+        <div class="conteiner">
+            <input type="text" class="direccion" id="direccion">
+            <label for="direccion">direccion</label>
+        </div>
+    </fieldset>  
+    <input type="submit" value="registrar">
 </form>
-
-
 
 
 </body>
