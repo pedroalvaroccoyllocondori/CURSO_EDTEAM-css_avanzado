@@ -3,6 +3,10 @@ TABLAS
 
 FORMULARIOS
 
+PSEUDOELEMENTOS FORMULARIOS 
+::placeholder---->modifica todos los estilos del placeholder
+
+
 
 SPEUDOCLASES FORMULARIOS
 
@@ -40,12 +44,19 @@ body{
 }
 
 
-input:valid{
-  background: limegreen;
+input:not(.boton):valid{
+  background: rgb(148, 201, 148);
   color: aliceblue;
   
 }
 input:invalid{
   background: red;
   color: aliceblue;
+}
+input::placeholder{
+  color:royalblue;
+  opacity: 0.5;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  word-spacing: 2px;
 }

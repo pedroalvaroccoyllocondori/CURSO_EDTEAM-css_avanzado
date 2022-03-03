@@ -15,17 +15,17 @@
         <div class="contenedor3">
             <label for="">nombre</label>
             <!-- pattern se envia una expresion regular -->
-            <input type="text" placeholder="escriba su nombre" minlength="5" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"> 
+            <input type="text" placeholder="escriba su nombre" minlength="5" pattern="([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*"> 
         </div>
         <div class="contenedor3">
             <label for="">apellido</label>
-            <input type="text" placeholder="escriba su apellido"> 
+            <input type="text" placeholder="escriba su apellido" pattern="([A-Z][a-z]*)([\\s\\\'-][A-Z][a-z]*)*"> 
         </div>
         <div class="contenedor3">
             <label for="">email</label>
-            <input type="email" placeholder="escriba correo"> 
+            <input type="email" placeholder="escriba correo"  pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"> 
         </div>
-        <input type="submit" value="enviar formulario ">
+        <input type="submit" class="boton"  value="enviar formulario ">
     </form>
  
 
