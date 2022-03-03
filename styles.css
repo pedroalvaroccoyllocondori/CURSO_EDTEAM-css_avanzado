@@ -2,12 +2,35 @@
 
 FORMULARIOS
 
+estilos textare
+
+both--->ambos lados
+none--->no hay redimension
+vertival--->redimensionamiento vertical
+horizontal--reminensionamirnto horizontal
+
 NO SOPORTADO POR TODOS LOS NAVEGADORES
 */
+
+
 
 *{
   font-family:sans-serif;
 }
+
+
+textarea{
+  resize:vertical;
+}
+
+p{
+  resize: both;
+  overflow: scroll;
+  outline:1px solid limegreen;
+}
+
+
+/* 
 
 input[type="text"]{
   background: red;
@@ -26,5 +49,5 @@ input[type="checkbox"]::before{
 
 input[type="checkbox"]:checked +label{
 background:red;
-}
+} */
 
