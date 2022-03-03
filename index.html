@@ -23,14 +23,22 @@
 <!-- placeholder con css -->
 <form action="#">
     <div class="contenedor2">
-        <input type="text" placeholder=" " required>   
+        <p>readonly</p>
+        <input type="text" value="manchas el gato con botas" readonly>   
         <label for="">nombre</label>
     </div>
     <div class="contenedor2">
+        <p>placeholder vacio con lable simulando plaholder</p>
         <input type="text" placeholder=" ">   
         <label for="">apellido</label>
     </div>
-    <input type="submit">
+    <div class="contenedor2">
+        <p>disable y placeholder</p>
+        <label for="">telefono</label>
+        <input type="text" placeholder=" " disabled>    
+    </div>
+    <!-- segun el navegador cambia los estilos con enable y readonly -->
+    <input type="submit" value="segun el navegador cambia ">
     <p>
 
         los campos con * son requeridos

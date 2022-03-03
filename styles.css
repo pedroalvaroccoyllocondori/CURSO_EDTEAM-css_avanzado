@@ -11,7 +11,10 @@ SPEUDOCLASES para detectar el foco
 :placeholder-shown--->aplica estilos mientras se muestra el placeholder
 :required --->selecciona los inputs que tengan este atributo
 :optional--->seleciona los imputs que no tengan el atributo required
-
+:read-only   --->seleciona los input que tienen este atributo
+:read-write --->selecion a los inputs de escritura
+:enable----->seleciona los campos habilitados
+:disable---> seleciona los campos desactivados
 */
 
 
@@ -33,7 +36,7 @@ body{
 }
 
 input{
-  background: rebeccapurple;
+  background: white;
 }
 
 input:placeholder-shown{
@@ -43,7 +46,7 @@ input:placeholder-shown{
 /* PLACEHOLDER CON CSS */
 
 
-.contenedor2{
+.contenedor2 {
 position: relative;
 }
 
@@ -67,4 +70,17 @@ input:required + label::before{
 input:optional + label::after{
   content: '(opcional)';
   color: red;
+}
+
+input:read-only{
+  background: goldenrod;
+}
+input:read-write{
+  background: lightseagreen;
+}
+input:disabled{
+  background: black;
+}
+input:enabled{
+  background: yellow;
 }
