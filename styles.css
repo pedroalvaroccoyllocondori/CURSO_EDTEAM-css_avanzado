@@ -6,11 +6,12 @@ FORMULARIOS
 SPEUDOCLASES para detectar el foco
 
 :focus------->foco directo del elemento
-:focus-within------>foco de un elemeto hijo a un padre
+:focus-within------>foco de un elemeto hijo
+:placeholder-shown--->aplica estilos mientras se muestra el placeholder
 
-foco del elemento
 
 */
+
 
 
 
@@ -29,26 +30,13 @@ body{
   min-height: 100vh;
 }
 
-input:focus{
-  background-color: lawngreen;
-  color: white
+input{
+  background: rebeccapurple;
 }
 
-form{
-  padding: 2rem;
+input:placeholder-shown{
+  background: aqua;
 }
-
-
-/* + selecciona a los hermanos de un elemento */
-form:focus-within + .conteiner{
-  background: slategray;
-}
-.conteiner{
-  height: 12rem;
-  width: 12rem;
-  background: royalblue;
-}
-
 
 /* PLACEHOLDER CON CSS */
 
@@ -60,9 +48,11 @@ position: relative;
 .contenedor2 label{
   position: absolute;
   left: .25rem;
-  opacity: 0.5;
 }
 
-.contenedor2:focus-within label{
+
+.contenedor2:focus-within label,
+input:not(:placeholder-shown) + label{
   display: none;
+  background: red;
 }
