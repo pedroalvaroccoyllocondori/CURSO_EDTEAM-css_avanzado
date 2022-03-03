@@ -10,39 +10,26 @@
 </head>
 <body>
 
-<!-- 
+
     <form action="#">
         <div class="contenedor3">
             <label for="">nombre</label>
-            <input type="text" placeholder="escriba su nombre"> 
+            <!-- pattern se envia una expresion regular -->
+            <input type="text" placeholder="escriba su nombre" minlength="5" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"> 
         </div>
+        <div class="contenedor3">
+            <label for="">apellido</label>
+            <input type="text" placeholder="escriba su apellido"> 
+        </div>
+        <div class="contenedor3">
+            <label for="">email</label>
+            <input type="email" placeholder="escriba correo"> 
+        </div>
+        <input type="submit" value="enviar formulario ">
     </form>
  
- -->
 
-<!-- placeholder con css -->
-<form action="#">
-    <div class="contenedor2">
-        <p>readonly</p>
-        <input type="text" value="manchas el gato con botas" readonly>   
-        <label for="">nombre</label>
-    </div>
-    <div class="contenedor2">
-        <p>placeholder vacio con lable simulando plaholder</p>
-        <input type="text" placeholder=" ">   
-        <label for="">apellido</label>
-    </div>
-    <div class="contenedor2">
-        <p>disable y placeholder</p>
-        <label for="">telefono</label>
-        <input type="text" placeholder=" " disabled>    
-    </div>
-    <!-- segun el navegador cambia los estilos con enable y readonly -->
-    <input type="submit" value="segun el navegador cambia ">
-    <p>
 
-        los campos con * son requeridos
-    </p>
 </form>
 
 

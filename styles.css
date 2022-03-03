@@ -4,7 +4,9 @@ TABLAS
 FORMULARIOS
 
 
-SPEUDOCLASES para detectar el foco
+SPEUDOCLASES FORMULARIOS
+
+
 
 :focus------->foco directo del elemento
 :focus-within------>foco de un elemeto hijo
@@ -15,6 +17,8 @@ SPEUDOCLASES para detectar el foco
 :read-write --->selecion a los inputs de escritura
 :enable----->seleciona los campos habilitados
 :disable---> seleciona los campos desactivados
+:valid ---->estilos para atributos validos 
+:invalid---->estilos para atributos invalidos
 */
 
 
@@ -35,52 +39,13 @@ body{
   min-height: 100vh;
 }
 
-input{
-  background: white;
+
+input:valid{
+  background: limegreen;
+  color: aliceblue;
+  
 }
-
-input:placeholder-shown{
-  background: white;
-}
-
-/* PLACEHOLDER CON CSS */
-
-
-.contenedor2 {
-position: relative;
-}
-
-.contenedor2 label{
-  position: absolute;
-  left: .25rem;
-  color:#ccc;
-}
-
-
-.contenedor2:focus-within label,
-input:not(:placeholder-shown) + label{
-  display: none;
+input:invalid{
   background: red;
-}
-
-input:required + label::before{
-  content: '*';
-  color: red;
-}
-input:optional + label::after{
-  content: '(opcional)';
-  color: red;
-}
-
-input:read-only{
-  background: goldenrod;
-}
-input:read-write{
-  background: lightseagreen;
-}
-input:disabled{
-  background: black;
-}
-input:enabled{
-  background: yellow;
+  color: aliceblue;
 }
