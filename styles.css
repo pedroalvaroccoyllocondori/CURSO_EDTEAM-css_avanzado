@@ -1,77 +1,30 @@
 /* TABLAS
 
-no importa la ubicacion del caption en la tabla
-simpere se pondra al incio
-solo se puede alterar su ubicacion con la propiedad 
-caption-side
+FORMULARIOS
 
-table layout: propiedad para el ancho de columna
-se distribuyen en forma equitativa
-REPLICANDO COMPORTAMKENTO DE LA TABLA CON DIV Y CSS
+NO SOPORTADO POR TODOS LOS NAVEGADORES
 */
 
 *{
   font-family:sans-serif;
 }
 
-:root{
-  --colorHead:rgb(25, 27, 151);
-  --filaPar:#e1e6f8;
-  --filaImpar:#c3cdff;
-  --colorBorde:#a8afcc;
-  
-}
-
-table tr td,th:not(.th-head){
-  border-right: 1px solid var(--colorBorde);
-}
-
-table,tfoot{
-  border:1px solid var(--colorBorde);
-  word-break: break-all;
-
-}
-
-table:nth-of-type(1) caption {
-  font-weight: 800;
+input[type="text"]{
+  background: red;
+  -moz-appearance:none;
 }
 
 
-table {
-  border-collapse: collapse;
-  border-spacing:1rem 0.1rem;
-  table-layout:fixed;/*auto viene por defecto*/
-  width: 100%;
-  empty-cells: hide;
+
+input[type="checkbox"]::before{
+  content:'';
+  width: 1rem;
+  height: 1rem;
+  background:blue;
+  display: block;
 }
 
-thead{
-  color:white;
-  background:var(--colorHead) ;
-}
-thead th{
-  /* border: none; */
+input[type="checkbox"]:checked +label{
+background:red;
 }
 
-table tbody tr:not(tfoot):nth-child(odd) {
-	background: var(--filaPar);
-}
-table tbody tr:nth-child(even) {
-	background: var(--filaImpar);
-}
-
-tr:not(.tr-head):hover{
-  background:rgb(130, 130, 130);
-}
-td:hover{
-  background:rgb(126, 126, 126);
-
-}
-
-td{
-text-align: right;
-}
-
-th{
-  text-align:left;
-}
