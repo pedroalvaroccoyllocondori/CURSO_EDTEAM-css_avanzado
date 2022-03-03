@@ -1,4 +1,5 @@
-/* TABLAS
+/* 
+TABLAS
 
 FORMULARIOS
 
@@ -8,7 +9,8 @@ SPEUDOCLASES para detectar el foco
 :focus------->foco directo del elemento
 :focus-within------>foco de un elemeto hijo
 :placeholder-shown--->aplica estilos mientras se muestra el placeholder
-
+:required --->selecciona los inputs que tengan este atributo
+:optional--->seleciona los imputs que no tengan el atributo required
 
 */
 
@@ -35,7 +37,7 @@ input{
 }
 
 input:placeholder-shown{
-  background: aqua;
+  background: white;
 }
 
 /* PLACEHOLDER CON CSS */
@@ -48,6 +50,7 @@ position: relative;
 .contenedor2 label{
   position: absolute;
   left: .25rem;
+  color:#ccc;
 }
 
 
@@ -55,4 +58,13 @@ position: relative;
 input:not(:placeholder-shown) + label{
   display: none;
   background: red;
+}
+
+input:required + label::before{
+  content: '*';
+  color: red;
+}
+input:optional + label::after{
+  content: '(opcional)';
+  color: red;
 }
