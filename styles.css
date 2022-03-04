@@ -5,6 +5,9 @@ INTRODUCCION A LOS FILTROS
 escala de grises---->
 filter: grayscale(); admite valores de 0 al 1 dependiendo el rango se aplica la intensidad de la escal de grises
 
+sepia------>
+filter: sepia(); admite valores de 0 al 1 dependiendo el rango se aplica la intensidad de sepia
+
 */
 
 
@@ -34,4 +37,7 @@ img{
 
 .escalaGrises img{
   filter: grayscale();
+}
+.sepia img{
+  filter: sepia(1);
 }
