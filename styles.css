@@ -44,33 +44,33 @@ contraste------>
 
 
 
-.grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 1px solid red;
-  gap: 1rem;
-
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height:100vh;
+  margin: 0;
+  background:#f2f2f2
 }
 
-.active{
-  grid-column-start:span 2 ;
-  grid-row-start:1 ;
+.elemento{
+  width: 200px;
+  height:200px;
+  background:white;
+  border-radius: 0.25rem;
+  position: relative;
 }
 
-div::before{
-  content: attr(class);
+.elemento::before{
+  content: '';
   display: block;
-  text-align: center;
-  
-}
-
-
-/* cuando aplicamos los filtros el orden de los filtros altera el resultado */
-img{
-  width: 100%;
-  filter: sepia(0.5) contrast(1.25) saturate(2)  ;
-}
-
-img:nth-of-type(2){
-  filter:brightness(.5) blur(10px) ;
+  background:gray;
+  width: 90%;
+  height:1rem;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 5%;
+  border-radius: 100%;
+  filter: blur(3px) opacity(0.3);
+  z-index: -1;
 }
