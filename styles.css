@@ -11,13 +11,35 @@ normal---> no aplica ninguna mezcla
 unset---->elimina el modo de fusion actual
 inherit--->heredar los modos de fusion
 
+
+MULTIPLICAR--->cuanto se multiplica con el color blanco da el mismo color del
+
+           ---> cuando se multiplica con el color negro siempre sa un color negro
+
 */
-body{
+
+img{
+  width: 24%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  mix-blend-mode: multiply;
+
+}
+
+
+.modosFusion{
+  filter: brightness(.5);
+}
+
+
+/* body{
   background-repeat: no-repeat;
   background-size:contain;
   background-position: center center;
   min-height:100vh;
-  /* background-color: ; */
+ 
   background-image: url('modosFusion/ejemplo1.jpg'),url('modosFusion/ejemplo2.jpg'),linear-gradient(transparent,rgb(69, 69, 240));
   background-blend-mode: multiply;
-}
+} */
+
