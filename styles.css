@@ -22,6 +22,10 @@ SCREEM---->hace lo minsmo que multiply solo que aclara las mezclas de color
 
 OVERLAY --->RESPETA la luminocidad y las sombras sin afectar el color base
 
+HARD-LIGHT--->hibrido entre screem y multiply  combinacion de ambos
+
+SOFT*LIGTH --->VERSION REDUCIDA DE OVERLAY
+
 */
 
 
@@ -33,7 +37,7 @@ body{
   min-height:100vh;
   /* background-color: azure; */
   background-image: url('modosFusion/ejemplo1.jpg'),url('modosFusion/ejemplo2.jpg'),linear-gradient(transparent,rgb(69, 69, 240));
-  background-blend-mode: overlay;
+  background-blend-mode: hard-light;
   display: flex;
   justify-content: center;
   align-items: center;
