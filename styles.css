@@ -54,32 +54,36 @@ FUNCIONA EN IMAGES SIN TONALIDAD
 SATURATION--->CAMBIA A LOS TONOS QUE ESTAN DEMASIDO SATURADOS
 
 LUMINOSITY---->conserva el tono y saturacion de los elemetos
+
+ISOLATION --->CREA UN NUEVO S¿CONTEXTO DE APLILAMIENTO para el modo de fusion
 */
 
 
 
 body{
 
-  /* background: linear-gradient(blue,red);
-  background-repeat: no-repeat;
-  background-size:contain;
-  background-position: center center; */
+background: greenyellow;
 } 
 
+article{
+  position: relative;
+  isolation: isolate;
+}
+
 img{
-  width: 40%;
-  /* mix-blend-mode: difference; */
+  width: 100%;
+  /* mix-blend-mode: screen; */
 }
 
-div{
+p{
   position: absolute;
-  width:100%;
-  height: 100%;
-  background:hsl(0,100%, 80%);
-  mix-blend-mode:luminosity;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 14rem;
+  color: rgba(13, 33, 214, 0.816);
+  font-family: sans-serif;
+  font-weight:800;
+  
+  mix-blend-mode:overlay;
 }
-
-
-/* img:nth-of-type(2){
-  mix-blend-mode:exclusion;
-} */
