@@ -16,30 +16,20 @@ MULTIPLICAR--->cuanto se multiplica con el color blanco da el mismo color del
 
            ---> cuando se multiplica con el color negro siempre sa un color negro
 
+
+SCREEM---->hace lo minsmo que multiply solo que aclara las mezclas de color
+      ---->cuando se aplica el color blanco siempre dara blanco analogo a multiply pero de forma inversa
+
 */
 
-img{
-  width: 24%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  mix-blend-mode: multiply;
-
-}
 
 
-.modosFusion{
-  filter: brightness(.5);
-}
-
-
-/* body{
+body{
   background-repeat: no-repeat;
   background-size:contain;
   background-position: center center;
   min-height:100vh;
- 
+  /* background-color: azure; */
   background-image: url('modosFusion/ejemplo1.jpg'),url('modosFusion/ejemplo2.jpg'),linear-gradient(transparent,rgb(69, 69, 240));
-  background-blend-mode: multiply;
-} */
-
+  background-blend-mode: screen;
+} 
