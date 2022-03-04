@@ -1,128 +1,37 @@
 /* 
-TABLAS
-
-FORMULARIOS
-
-PSEUDOELEMENTOS FORMULARIOS 
-::placeholder---->modifica todos los estilos del placeholder
+INTRODUCCION A LOS FILTROS
 
 
+escala de grises---->
+filter: grayscale(); admite valores de 0 al 1 dependiendo el rango se aplica la intensidad de la escal de grises
 
-SPEUDOCLASES FORMULARIOS
-
-
-
-:focus------->foco directo del elemento
-:focus-within------>foco de un elemeto hijo
-:placeholder-shown--->aplica estilos mientras se muestra el placeholder
-:required --->selecciona los inputs que tengan este atributo
-:optional--->seleciona los imputs que no tengan el atributo required
-:read-only   --->seleciona los input que tienen este atributo
-:read-write --->selecion a los inputs de escritura
-:enable----->seleciona los campos habilitados
-:disable---> seleciona los campos desactivados
-:valid ---->estilos para atributos validos 
-:invalid---->estilos para atributos invalidos
 */
 
 
 
-
-*{
-  font-family:sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root{
-  --color:steelblue;
-}
-body{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-  min-height: 100vh;
-  background:var(--color);
-  font-family: serif;
-}
-
-h2{
-  color: var(--color);
-}
-
-
-form{
-  display: flex;
-  flex-direction: column;
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid red;
   gap: 1rem;
-  background: white;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  max-width: 500px;
-}
-fieldset{
-  border: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-legend{
-  font-weight: 400;
+
 }
 
+.active{
+  grid-column-start:span 2 ;
+  grid-row-start:1 ;
+}
 
-.conteiner{
-  display: flex;
-  flex-direction:column;
-  flex-grow: 1;
+div::before{
+  content: attr(class);
+  display: block;
+  text-align: center;
+  
 }
-.conteiner label{
-  font-size:0.75rem;
-  order:-1;
-  margin-bottom:0.25rem;
-}
-.conteiner input{
-  border: 1px solid #ddd;
-  border-radius:0.2rem;
-  padding: 0.25rem 0.5rem;
+img{
   width: 100%;
 }
 
-/* estilos de boton */
-
-input[type="submit"]{
-  color: white;
-  background:var(--color);
-  border: none;
-  padding: 0.5rem;
-}
-
-.conteiner input:focus +label{
-  color: var(--color);
-}
-
-
-/* estilos subcontenedores */
-.sub-conteiner{
-  display: flex;
-  flex-grow: 1;
-  gap:1rem;
-  flex-basis: 40%;
-  flex-direction: column;
-
-}
-
-fieldset:focus-within legend{
-  color: var(--color);
-  font-weight:bold;
-}
-
-
-input:not(input[type="submit"]):valid{
-  /* background: rgb(148, 201, 148);
-  color: aliceblue; */
-  
+.escalaGrises img{
+  filter: grayscale();
 }
