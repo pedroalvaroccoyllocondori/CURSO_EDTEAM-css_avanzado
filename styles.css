@@ -20,6 +20,8 @@ MULTIPLICAR--->cuanto se multiplica con el color blanco da el mismo color del
 SCREEM---->hace lo minsmo que multiply solo que aclara las mezclas de color
       ---->cuando se aplica el color blanco siempre dara blanco analogo a multiply pero de forma inversa
 
+OVERLAY --->RESPETA la luminocidad y las sombras sin afectar el color base
+
 */
 
 
@@ -31,5 +33,20 @@ body{
   min-height:100vh;
   /* background-color: azure; */
   background-image: url('modosFusion/ejemplo1.jpg'),url('modosFusion/ejemplo2.jpg'),linear-gradient(transparent,rgb(69, 69, 240));
-  background-blend-mode: screen;
+  background-blend-mode: overlay;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 } 
+
+body:hover{
+  background-image: url('modosFusion/ejemplo1.jpg'),url('modosFusion/ejemplo2.jpg'),linear-gradient(transparent,rgb(26, 209, 72));
+}
+
+h1{
+  text-transform: uppercase;
+  color:azure;
+  font-family: sans-serif;
+  font-weight: 800;
+  text-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
