@@ -63,135 +63,14 @@ div::before{
   text-align: center;
   
 }
+
+
+/* cuando aplicamos los filtros el orden de los filtros altera el resultado */
 img{
   width: 100%;
-}
-/* ************************* */
-.escalaGrises img{
-  filter: grayscale(0);
-  animation: escalaGrises 3s linear infinite ;
-
-}
-@keyframes escalaGrises{
-  to{
-    filter: grayscale(1);
-  }
-}
-/* ************************* */
-
-
-.sepia img{
-  filter: sepia(0);
-  animation: sepia 3s linear infinite alternate;
-
-}
-@keyframes sepia{
-  to{
-    filter: sepia(1);
-
-  }
+  filter: sepia(0.5) contrast(1.25) saturate(2)  ;
 }
 
-/* ************************* */
-
-
-.invert img{
-  filter: invert(0);
-  animation: invertido 3s linear infinite alternate;
-
-}
-@keyframes invertido{
-  to{
-    filter: invert(1);
-
-
-  }
-}
-
-/* ************************* */
-
-.hue-rotate img{
-  filter: hue-rotate(0);
-  animation: hue 3s linear infinite;
-}
-@keyframes hue{
-  to{
-    filter:hue-rotate(1turn)
-  }
-}
-/* ************************* */
-
-.brillo img{
-  filter: brightness(50%);
-  animation: brillo 3s linear infinite alternate;
-
-}
-@keyframes brillo{
-  to{
-    filter:brightness(200%)
-  }
-}
-/* ************************* */
-
-.contraste img{
-  filter: contrast(0%);
-  animation: contraste 3s linear infinite ;
-
-}
-@keyframes contraste{
-  to{
-    filter: contrast(200%);
-  }
-}
-/* ************************* */
-
-.saturacion img{
-  filter: saturate(0%);
-  animation: saturacion 3s linear infinite ;
-
-}
-@keyframes saturacion{
-  to{
-    filter: saturate(400%);
-
-  }
-}
-/* ************************* */
-
-.blur img{
-  filter: blur(0);
-  animation: blur 3s linear infinite alternate;
-
-}
-@keyframes blur{
-  to{
-    filter: blur(5px);
-
-  }
-}
-/* ************************* */
-
-.opacidad img{
-  filter: opacity(0);
-  animation: opacidad 3s linear infinite alternate;
-
-}
-@keyframes opacidad{
-  to{
-    filter: opacity(1);
-
-  }
-}
-/* ************************* */
-
-.drop-shadow img{
-  filter: drop-shadow( 0px 0px 0px black );
-  animation: drop-shadow 3s linear infinite alternate;
-
-}
-@keyframes drop-shadow{
-  to{
-    filter: drop-shadow( 10px 10px 3px black );
-
-  }
+img:nth-of-type(2){
+  filter:brightness(.5) blur(10px) ;
 }
