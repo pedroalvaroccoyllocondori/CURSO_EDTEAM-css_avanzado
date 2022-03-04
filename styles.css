@@ -26,6 +26,10 @@ HARD-LIGHT--->hibrido entre screem y multiply  combinacion de ambos
 
 SOFT*LIGTH --->VERSION REDUCIDA DE OVERLAY
 
+COLOR-DOGGE--->refuerza las zonas claras de la fusion del
+
+COLOR-BURN--->REFUERZA LAS ZONAS OSCURAS DE LA FUSION
+
 */
 
 
@@ -36,15 +40,15 @@ body{
   background-position: center center;
   min-height:100vh;
   /* background-color: azure; */
-  background-image: url('modosFusion/ejemplo1.jpg'),url('modosFusion/ejemplo2.jpg'),linear-gradient(transparent,rgb(69, 69, 240));
-  background-blend-mode: hard-light;
+  background-image: url('modosFusion/ejemplo1.jpg'),url('modosFusion/ejemplo2.jpg');
+  background-blend-mode: color-burn;
   display: flex;
   justify-content: center;
   align-items: center;
 } 
 
 body:hover{
-  background-image: url('modosFusion/ejemplo1.jpg'),url('modosFusion/ejemplo2.jpg'),linear-gradient(transparent,rgb(26, 209, 72));
+  /* background-image: url('modosFusion/ejemplo1.jpg'),url('modosFusion/ejemplo2.jpg'),linear-gradient(transparent,rgb(26, 209, 72)); */
 }
 
 h1{
