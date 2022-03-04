@@ -1,76 +1,23 @@
-/* 
-INTRODUCCION A LOS FILTROS
+/* blending modes MODOS DE FUSION
 
 
-escala de grises---->
-filter: grayscale(); admite valores de 0 al 1 dependiendo el rango se aplica la intensidad de la escal de grises
-
-sepia------>
-filter: sepia(); admite valores de 0 al 1 dependiendo el rango se aplica la intensidad de sepia
-
-invert------>
-filter: invert(); admite valores de 0 al 1 dependiendo el rango se aplica la intensidad de la inversions
-NOTA CUANDO EL VALOR ESTA A LA MITAD SE VUELVE GRIS
+mix-blend-mode:normal------>modo de fusion de elementos
+background-blend-mode   --------->modo de fuison de fondos
 
 
 
-hue rotate------>
-filter: hue-rotate(); admite valores de grados en la rueda de tonos varia el tono segun el grado que se encuentre
+initial--->no establece ningun modo de fuiones(valor inicial)
+normal---> no aplica ninguna mezcla
+unset---->elimina el modo de fusion actual
+inherit--->heredar los modos de fusion
 
-
-brillo------>
- filter: brightness(10%); admite valores del 0 al 1 pero el 1 esta reservado para la la luminosidad total
-
-contraste------>
- filter: contrast(2) admite valores del 0 al 1 pero el 1 esta reservado para la el contraste total
- 
- saturacion------>
-   filter: saturate(0%);
- admite valores del 0 al 1 pero el 1 esta reservado para la saturacion total
- 
- blur------>
-  filter: blur(5px);
-  solo admite valores de medidano admite valores negativos
- 
-  opacidad------>
-  filter: opacidad(1);
-  admite valores del 0 al 1 donde 1 es la maxima opacidad(claro total) 
- 
-  drop-shadow------>
-  filter: drop-shadow( 10px 10px 3px black )
-  admite 4 valores: 1ro ejey, 2do ejex, 3ro blur, 4to color de sombra
-  NOTA : ESTA SOMBRA SE APLICA A LA SILUETA(PNG,SVG) Y NO COMO EN BOX SHADOW QUE SE APLICABA AL CONTENEDOR
 */
-
-
-
 body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-position: center center;
   min-height:100vh;
-  margin: 0;
-  background:#f2f2f2
-}
-
-.elemento{
-  width: 200px;
-  height:200px;
-  background:white;
-  border-radius: 0.25rem;
-  position: relative;
-}
-
-.elemento::before{
-  content: '';
-  display: block;
-  background:gray;
-  width: 90%;
-  height:1rem;
-  position: absolute;
-  bottom: -0.5rem;
-  left: 5%;
-  border-radius: 100%;
-  filter: blur(3px) opacity(0.3);
-  z-index: -1;
+  /* background-color: ; */
+  background-image: url('modosFusion/ejemplo1.jpg'),url('modosFusion/ejemplo2.jpg'),linear-gradient(transparent,rgb(69, 69, 240));
+  background-blend-mode: multiply;
 }
