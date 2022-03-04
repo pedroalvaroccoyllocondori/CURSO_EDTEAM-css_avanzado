@@ -41,49 +41,24 @@ cuando se agregan colores que no tienen mucha luminosidad no se aprecia mucho el
 DIFERENCE---->RESTA el color con mayor luminosidad con el que tiene menor
               con el color negro no afecta a la operacion por tener el valor de 0 en rgb
 
+
+EXCLUSION--->ANALOGO A DIFERENCE hace los mismos calculos pero con menor contraste
 */
 
 
 
 body{
+
+  background: linear-gradient(blue,red);
   background-repeat: no-repeat;
   background-size:contain;
   background-position: center center;
-  min-height:100vh;
-  background-color: rgb(29, 29, 29);
-  background-image: url('modosFusion/ejemplo1.jpg');
-  background-blend-mode: difference;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 } 
 
-
-.conteiner{
-  position: relative;
-  margin: 5rem;
-}
-
-
-h1{
-
-  position:absolute;
-  left: -4rem;
-  color:rgb(0, 0, 255)
-}
-
-.elemento{
-  width: 300px;
-  height:300px;
-  background:linear-gradient(orange,blue);
+img{
+  width: 40%;
   mix-blend-mode: difference;
 }
-
-/* 
-azul--->rgb(0, 0, 255)-
-rojo--->rgb(255, 0, 0)
-       ---------------
-       rgb(255-0,0-0,255-0)
-
-
-*/
+img:nth-of-type(2){
+  mix-blend-mode:exclusion;
+}
