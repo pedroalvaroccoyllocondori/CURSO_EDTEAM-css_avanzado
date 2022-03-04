@@ -35,6 +35,11 @@ contraste------>
   opacidad------>
   filter: opacidad(1);
   admite valores del 0 al 1 donde 1 es la maxima opacidad(claro total) 
+ 
+  drop-shadow------>
+  filter: drop-shadow( 10px 10px 3px black )
+  admite 4 valores: 1ro ejey, 2do ejex, 3ro blur, 4to color de sombra
+  NOTA : ESTA SOMBRA SE APLICA A LA SILUETA(PNG,SVG) Y NO COMO EN BOX SHADOW QUE SE APLICABA AL CONTENEDOR
 */
 
 
@@ -174,6 +179,19 @@ img{
 @keyframes opacidad{
   to{
     filter: opacity(1);
+
+  }
+}
+/* ************************* */
+
+.drop-shadow img{
+  filter: drop-shadow( 0px 0px 0px black );
+  animation: drop-shadow 3s linear infinite alternate;
+
+}
+@keyframes drop-shadow{
+  to{
+    filter: drop-shadow( 10px 10px 3px black );
 
   }
 }
