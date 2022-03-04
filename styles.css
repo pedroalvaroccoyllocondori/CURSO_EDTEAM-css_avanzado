@@ -27,6 +27,10 @@ contraste------>
  saturacion------>
    filter: saturate(0%);
  admite valores del 0 al 1 pero el 1 esta reservado para la saturacion total
+ 
+ blur------>
+  filter: blur(5px);
+  solo admite valores de medidano admite valores negativos
 */
 
 
@@ -140,6 +144,19 @@ img{
 @keyframes saturacion{
   to{
     filter: saturate(400%);
+
+  }
+}
+/* ************************* */
+
+.blur img{
+  filter: blur(0);
+  animation: blur 3s linear infinite alternate;
+
+}
+@keyframes blur{
+  to{
+    filter: blur(5px);
 
   }
 }
