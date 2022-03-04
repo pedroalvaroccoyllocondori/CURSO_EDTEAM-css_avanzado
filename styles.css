@@ -31,6 +31,10 @@ contraste------>
  blur------>
   filter: blur(5px);
   solo admite valores de medidano admite valores negativos
+ 
+  opacidad------>
+  filter: opacidad(1);
+  admite valores del 0 al 1 donde 1 es la maxima opacidad(claro total) 
 */
 
 
@@ -157,6 +161,19 @@ img{
 @keyframes blur{
   to{
     filter: blur(5px);
+
+  }
+}
+/* ************************* */
+
+.opacidad img{
+  filter: opacity(0);
+  animation: opacidad 3s linear infinite alternate;
+
+}
+@keyframes opacidad{
+  to{
+    filter: opacity(1);
 
   }
 }
