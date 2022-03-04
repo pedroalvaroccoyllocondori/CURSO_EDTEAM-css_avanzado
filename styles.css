@@ -11,6 +11,16 @@ filter: sepia(); admite valores de 0 al 1 dependiendo el rango se aplica la inte
 invert------>
 filter: invert(); admite valores de 0 al 1 dependiendo el rango se aplica la intensidad de la inversions
 NOTA CUANDO EL VALOR ESTA A LA MITAD SE VUELVE GRIS
+
+
+
+hue rotate------>
+filter: hue-rotate(); admite valores de grados en la rueda de tonos varia el tono segun el grado que se encuentre
+
+
+brillo------>
+ filter: brightness(10%); admite valores del 0 al 1 pero el 1 esta reservado para la la luminosidad total
+
 */
 
 
@@ -37,13 +47,68 @@ div::before{
 img{
   width: 100%;
 }
-
+/* ************************* */
 .escalaGrises img{
-  filter: grayscale();
+  filter: grayscale(0);
+  animation: escalaGrises 3s linear infinite ;
+
 }
+@keyframes escalaGrises{
+  to{
+    filter: grayscale(1);
+  }
+}
+/* ************************* */
+
+
 .sepia img{
-  filter: sepia(1);
+  filter: sepia(0);
+  animation: sepia 3s linear infinite alternate;
+
 }
+@keyframes sepia{
+  to{
+    filter: sepia(1);
+
+  }
+}
+
+/* ************************* */
+
+
 .invert img{
-  filter: invert(.9);
+  filter: invert(0);
+  animation: invertido 3s linear infinite alternate;
+
+}
+@keyframes invertido{
+  to{
+    filter: invert(1);
+
+
+  }
+}
+
+/* ************************* */
+
+.hue-rotate img{
+  filter: hue-rotate(0);
+  animation: hue 3s linear infinite;
+}
+@keyframes hue{
+  to{
+    filter:hue-rotate(1turn)
+  }
+}
+/* ************************* */
+
+.brillo img{
+  filter: brightness(50%);
+  animation: brillo 3s linear infinite alternate;
+
+}
+@keyframes brillo{
+  to{
+    filter:brightness(200%)
+  }
 }
