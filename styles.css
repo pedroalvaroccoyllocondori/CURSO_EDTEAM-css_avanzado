@@ -43,22 +43,35 @@ DIFERENCE---->RESTA el color con mayor luminosidad con el que tiene menor
 
 
 EXCLUSION--->ANALOGO A DIFERENCE hace los mismos calculos pero con menor contraste
+
+
+HUE----->SOLO REMPLAZA EN LOS COLORES QUE TIENEN UN TONO pero deja la satutacion y la luminosidad iguales
 */
 
 
 
 body{
 
-  background: linear-gradient(blue,red);
+  /* background: linear-gradient(blue,red);
   background-repeat: no-repeat;
   background-size:contain;
-  background-position: center center;
+  background-position: center center; */
 } 
 
 img{
   width: 40%;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
-img:nth-of-type(2){
+
+div{
+  position: absolute;
+  width:100%;
+  height: 100%;
+  background:red;
+  mix-blend-mode:hue;
+}
+
+
+/* img:nth-of-type(2){
   mix-blend-mode:exclusion;
-}
+} */
