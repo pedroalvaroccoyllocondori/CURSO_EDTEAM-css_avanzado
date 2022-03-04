@@ -35,6 +35,12 @@ DARKEN --->compara los colores que hay en las capas y selecciona el mas oscuro a
 LIGHTEN---> ANALOGO A DARKEN lo inverso
 cuando se agregan colores que no tienen mucha luminosidad no se aprecia mucho el efecto
 
+
+****************************************************************
+
+DIFERENCE---->RESTA el color con mayor luminosidad con el que tiene menor
+              con el color negro no afecta a la operacion por tener el valor de 0 en rgb
+
 */
 
 
@@ -44,22 +50,40 @@ body{
   background-size:contain;
   background-position: center center;
   min-height:100vh;
-  background-color: hsla(100,50%,30%);
+  background-color: rgb(29, 29, 29);
   background-image: url('modosFusion/ejemplo1.jpg');
-  background-blend-mode: lighten;
+  background-blend-mode: difference;
   display: flex;
   justify-content: center;
   align-items: center;
 } 
 
-body:hover{
-  /* background-image: url('modosFusion/ejemplo1.jpg'),url('modosFusion/ejemplo2.jpg'),linear-gradient(transparent,rgb(26, 209, 72)); */
+
+.conteiner{
+  position: relative;
+  margin: 5rem;
 }
 
+
 h1{
-  text-transform: uppercase;
-  color:azure;
-  font-family: sans-serif;
-  font-weight: 800;
-  text-shadow: 2px 2px 2px rgba(0,0,0,.25);
+
+  position:absolute;
+  left: -4rem;
+  color:rgb(0, 0, 255)
 }
+
+.elemento{
+  width: 300px;
+  height:300px;
+  background:linear-gradient(orange,blue);
+  mix-blend-mode: difference;
+}
+
+/* 
+azul--->rgb(0, 0, 255)-
+rojo--->rgb(255, 0, 0)
+       ---------------
+       rgb(255-0,0-0,255-0)
+
+
+*/
