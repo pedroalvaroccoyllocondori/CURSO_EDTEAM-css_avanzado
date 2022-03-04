@@ -22,8 +22,11 @@ brillo------>
  filter: brightness(10%); admite valores del 0 al 1 pero el 1 esta reservado para la la luminosidad total
 
 contraste------>
- ilter: contrast(2) admite valores del 0 al 1 pero el 1 esta reservado para la el contraste total
-
+ filter: contrast(2) admite valores del 0 al 1 pero el 1 esta reservado para la el contraste total
+ 
+ saturacion------>
+   filter: saturate(0%);
+ admite valores del 0 al 1 pero el 1 esta reservado para la saturacion total
 */
 
 
@@ -125,5 +128,18 @@ img{
 @keyframes contraste{
   to{
     filter: contrast(200%);
+  }
+}
+/* ************************* */
+
+.saturacion img{
+  filter: saturate(0%);
+  animation: saturacion 3s linear infinite ;
+
+}
+@keyframes saturacion{
+  to{
+    filter: saturate(400%);
+
   }
 }
