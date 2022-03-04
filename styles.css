@@ -8,6 +8,9 @@ filter: grayscale(); admite valores de 0 al 1 dependiendo el rango se aplica la 
 sepia------>
 filter: sepia(); admite valores de 0 al 1 dependiendo el rango se aplica la intensidad de sepia
 
+invert------>
+filter: invert(); admite valores de 0 al 1 dependiendo el rango se aplica la intensidad de la inversions
+NOTA CUANDO EL VALOR ESTA A LA MITAD SE VUELVE GRIS
 */
 
 
@@ -40,4 +43,7 @@ img{
 }
 .sepia img{
   filter: sepia(1);
+}
+.invert img{
+  filter: invert(.9);
 }
