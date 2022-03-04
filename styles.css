@@ -21,6 +21,9 @@ filter: hue-rotate(); admite valores de grados en la rueda de tonos varia el ton
 brillo------>
  filter: brightness(10%); admite valores del 0 al 1 pero el 1 esta reservado para la la luminosidad total
 
+contraste------>
+ ilter: contrast(2) admite valores del 0 al 1 pero el 1 esta reservado para la el contraste total
+
 */
 
 
@@ -110,5 +113,17 @@ img{
 @keyframes brillo{
   to{
     filter:brightness(200%)
+  }
+}
+/* ************************* */
+
+.contraste img{
+  filter: contrast(0%);
+  animation: contraste 3s linear infinite ;
+
+}
+@keyframes contraste{
+  to{
+    filter: contrast(200%);
   }
 }
