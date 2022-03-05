@@ -25,7 +25,13 @@ ANIMACIONES
 solo se permite animaciones con el mismo tipo de clip-path:
 se puede hacer animaciones pero ambos elementos tienen que poseer la misma cantidad de puntas
 
-MASCARAS----> 
+MASCARAS----> aplica la misma configuracion que una mascara
+
+composicion de MASCARAS
+add---añadir
+subtract--resta
+intersect--deja interseccion
+exclude---esclusion
 
 */
 
@@ -36,23 +42,29 @@ MASCARAS---->
 
 
 
-.img{
-  width:100em;
-  height:100%;
-  display:inline-block;
-  mask-image:linear-gradient(black 50%, transparent);
- 
-}
-
-
-
-img{
-  width: 30em;
-  height: 50vh;
+ img{
+  width: 100vw;
+  height: 300px;
   display: block;
   object-fit: cover;
-  mask-image: url('recortes/react.svg');
+  mask-image: url('recortes/máscara-circulo.png') ,url('recortes/máscara-circulo.png');
   mask-repeat: no-repeat;
+  mask-position:  center ,110px center;
+  mask-size: 500px;
+  mask-composite: exclude;
+} 
+
+.conteiner2{
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: linear-gradient(blue, red);
+  mask-image:url('recortes/máscara-circulo.png'), url('recortes/cat.png');
   mask-position: center;
-  mask-size: 100px;
+  mask-repeat:no-repeat;
+  mask-size:150%,15rem;
+  mask-composite: subtract;
+}
+.conteiner2:hover{
+  background: linear-gradient(yellow 10%,orange);
 }
