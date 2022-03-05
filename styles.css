@@ -11,14 +11,33 @@ se puede poner un redondeado al recorte con la funcion round()--->tambn acepta 4
 
 */
 
-
+body {
+  display: flex;
+  flex-direction: column;
+}
 
 
 div{
   float: left;
   width: 300px;
   height:300px;
-  shape-outside: inset(30% 10% 5% 50% round 2rem);
+}
+
+section::before{
+  content: attr(class);
+  display: block;
+  text-align: center;
+  background: red;
+}
+
+.clip-path{
+  
+  clip-path: inset(30%  5% 50% round 2rem);
+}
+
+.shape-outside{
+  
+  shape-outside: inset(30%  5% 50% round 2rem);
 }
 
 
@@ -27,6 +46,5 @@ img{
   width: 100%;
   height:100%;
   object-fit: cover;
-  clip-path: inset(30% 10% 5% 50% round 2rem);
 
 }
