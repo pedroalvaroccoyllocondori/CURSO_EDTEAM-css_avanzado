@@ -25,20 +25,34 @@ ANIMACIONES
 solo se permite animaciones con el mismo tipo de clip-path:
 se puede hacer animaciones pero ambos elementos tienen que poseer la misma cantidad de puntas
 
-
+MASCARAS----> 
 
 */
 
-img{
-  width: 60%;
-  display: block;
-  clip-path:polygon(0 100%, 50% 0,100% 100% ,60% 50%);
-  transition: clip-path 2s;
+
+*{
+  margin: 0;
 }
 
-.conteiner:hover img{
-  clip-path: polygon(0 0, 50% 100%,100% 0,100% 0) ;
+
+
+.img{
+  width:100em;
+  height:100%;
+  display:inline-block;
+  mask-image:linear-gradient(black 50%, transparent);
+ 
 }
-.conteiner{
-  border: 1px solid red
+
+
+
+img{
+  width: 30em;
+  height: 50vh;
+  display: block;
+  object-fit: cover;
+  mask-image: url('recortes/react.svg');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100px;
 }
