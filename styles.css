@@ -7,9 +7,15 @@ inset()---->recorte rectangular cantidad a recortar desde el limite hasta el cen
 acepta medidas y porcentajes,como 4 valores en cada lado
 se puede poner un redondeado al recorte con la funcion round()--->tambn acepta 4 valores
 
+circle()---->recorte circular el primer valor es el tamaño del radio el segundo valor es la ubicacion del recorte(acepta valores numericos y porcentajes)
+
 
 
 */
+
+:root{
+  --recorte:circle(50px at 10% 50%)
+}
 
 body {
   display: flex;
@@ -32,12 +38,12 @@ section::before{
 
 .clip-path{
   
-  clip-path: inset(30%  5% 50% round 2rem);
+  clip-path: var(--recorte);
 }
 
 .shape-outside{
   
-  shape-outside: inset(30%  5% 50% round 2rem);
+  shape-outside:var(--recorte);
 }
 
 
