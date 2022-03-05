@@ -9,12 +9,12 @@ se puede poner un redondeado al recorte con la funcion round()--->tambn acepta 4
 
 circle()---->recorte circular el primer valor es el tamaño del radio el segundo valor es la ubicacion del recorte(acepta valores numericos y porcentajes)
 
-
+ellipse()---->recorte de elipse analogo a circle solo que se pasan 2 radiosde
 
 */
 
 :root{
-  --recorte:circle(50px at 10% 50%)
+  --recorte:ellipse(200px 50px at 30% 50%)
 }
 
 body {
