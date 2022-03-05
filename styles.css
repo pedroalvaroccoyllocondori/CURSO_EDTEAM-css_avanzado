@@ -11,10 +11,12 @@ circle()---->recorte circular el primer valor es el tamaño del radio el segundo
 
 ellipse()---->recorte de elipse analogo a circle solo que se pasan 2 radiosde
 
+poligon()----->recorte poligonal (x y, x y,x y ,.....)se pasan las coordenadas de los vertices
+ no se pueden redondear los lados
 */
 
 :root{
-  --recorte:ellipse(200px 50px at 30% 50%)
+  --recorte:  polygon(20% 0%, 0% 20%, 30% 50%, 0 100%, 39% 89%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 0, 61% 11%, 50% 30%);;
 }
 
 body {
@@ -44,6 +46,7 @@ section::before{
 .shape-outside{
   
   shape-outside:var(--recorte);
+  shape-margin: 1rem;/*margen entre el outside*/
 }
 
 
@@ -52,5 +55,5 @@ img{
   width: 100%;
   height:100%;
   object-fit: cover;
-
+  
 }
