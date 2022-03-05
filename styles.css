@@ -1,89 +1,32 @@
-/* blending modes MODOS DE FUSION
+/* RECORTES EN CSS 
+
+RECORTES ---> ANALOGO A LAS TIJERAS
+
+clip-path:
+inset()---->recorte rectangular cantidad a recortar desde el limite hasta el centro
+acepta medidas y porcentajes,como 4 valores en cada lado
+se puede poner un redondeado al recorte con la funcion round()--->tambn acepta 4 valores
 
 
-mix-blend-mode:normal------>modo de fusion de elementos
-background-blend-mode   --------->modo de fuison de fondos
 
-
-
-initial--->no establece ningun modo de fuiones(valor inicial)
-normal---> no aplica ninguna mezcla
-unset---->elimina el modo de fusion actual
-inherit--->heredar los modos de fusion
-
-
-MULTIPLICAR--->cuanto se multiplica con el color blanco da el mismo color del
-
-           ---> cuando se multiplica con el color negro siempre sa un color negro
-
-
-SCREEM---->hace lo minsmo que multiply solo que aclara las mezclas de color
-      ---->cuando se aplica el color blanco siempre dara blanco analogo a multiply pero de forma inversa
-
-OVERLAY --->RESPETA la luminocidad y las sombras sin afectar el color base
-
-HARD-LIGHT--->hibrido entre screem y multiply  combinacion de ambos
-
-SOFT*LIGTH --->VERSION REDUCIDA DE OVERLAY
-
-COLOR-DOGGE--->refuerza las zonas claras de la fusion del
-
-COLOR-BURN--->REFUERZA LAS ZONAS OSCURAS DE LA FUSION
-
-DARKEN --->compara los colores que hay en las capas y selecciona el mas oscuro a prtir de ahi remplaza los pizeles mas claros por los mas oscuros cuando se usa un color muy claro no se nota mucho el efecto
-
-LIGHTEN---> ANALOGO A DARKEN lo inverso
-cuando se agregan colores que no tienen mucha luminosidad no se aprecia mucho el efecto
-
-
-****************************************************************
-
-DIFERENCE---->RESTA el color con mayor luminosidad con el que tiene menor
-              con el color negro no afecta a la operacion por tener el valor de 0 en rgb
-
-
-EXCLUSION--->ANALOGO A DIFERENCE hace los mismos calculos pero con menor contraste
-
-
-HUE----->SOLO REMPLAZA EN LOS COLORES QUE TIENEN UN TONO pero deja la satutacion y la luminosidad iguales 
-        NO FUNCIONA EN IMAGENES QUE NO TIENEN TONALIDAD
-
-COLOR ---> REMPLAZA  EL TONO Y LA SATURACION PERO CONSERVA LA LUMINOSIDAD 
-FUNCIONA EN IMAGES SIN TONALIDAD
-
-SATURATION--->CAMBIA A LOS TONOS QUE ESTAN DEMASIDO SATURADOS
-
-LUMINOSITY---->conserva el tono y saturacion de los elemetos
-
-ISOLATION --->CREA UN NUEVO S¿CONTEXTO DE APLILAMIENTO para el modo de fusion
 */
 
 
 
-body{
 
-background: greenyellow;
-} 
-
-article{
-  position: relative;
-  isolation: isolate;
+div{
+  float: left;
+  width: 300px;
+  height:300px;
+  shape-outside: inset(30% 10% 5% 50% round 2rem);
 }
+
 
 img{
+  display: block;
   width: 100%;
-  /* mix-blend-mode: screen; */
-}
+  height:100%;
+  object-fit: cover;
+  clip-path: inset(30% 10% 5% 50% round 2rem);
 
-p{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  font-size: 14rem;
-  color: rgba(13, 33, 214, 0.816);
-  font-family: sans-serif;
-  font-weight:800;
-  
-  mix-blend-mode:overlay;
 }
