@@ -112,6 +112,31 @@ hover-->hover
   border-radius: 1em;
 }
 
+
+
+.conteiner::-webkit-scrollbar-thumb:vertical:hover{
+  background:black
+}
+
+
+.conteiner::-webkit-scrollbar-button:horizontal{
+  background:aqua
+}
+/* start y end en botones */
+.conteiner::-webkit-scrollbar-button:start{
+  background:linear-gradient(pink,red)
+}
+.conteiner::-webkit-scrollbar-track-piece:start{
+  background:linear-gradient(pink,white)
+}
+
+/* botones  increment y decrement*/
+.conteiner.conteiner::-webkit-scrollbar-button:increment{
+  background:rgb(60, 45, 7);
+  border-radius: 1em;
+}
+
+
 p{
   width: 400px;
 }
