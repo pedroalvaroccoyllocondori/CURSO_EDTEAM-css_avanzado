@@ -38,85 +38,81 @@ proximity-->acerca al elemento un scrol automatico
 mandatory--->alinea los elementos cuando decta la intencion del scroll
 scroll-snap-align--->funciona en conujto con scrollsnap type
 
+
+
+
 */
 
 body{
-  margin :0;
-}
-
-
-html{
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
-section{
-  scroll-snap-align: center;
-  min-height: 100vh;
-  width: 100%;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size:10rem;
+  min-height:100vh;
 }
 
-nav{
-  display: flex;
-  flex-direction: column;
-  position:fixed;
-  right: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
+.conteiner{
+  width: 300px;
+  height:300px;
+  overflow:auto;
 }
 
-a{
-  position: relative;
-  padding:0.25rem;
-  display:inline-block;
 
+/* pseudoelementos del scroll
+
+scrollbar-->todo la barra de scroll
+*/
+
+.conteiner::-webkit-scrollbar{
+  background: aqua;
+  border-radius: 2em;
+  width: 30px;/*solo aplica al ancho de la barra vertical*/
+  height: 60px;/*solo aplica al ancho de la barra horizontall*/
 }
 
-a:hover::before{
-  transform: scale(2);
+.conteiner::-webkit-scrollbar-track{
+  background: rebeccapurple;
 }
 
-a::after{
-  white-space: nowrap;
-  content: attr(href);
-  position:absolute;
-  left: -3rem;
-  top:1rem;
-  font-size:1rem;
-  font-family: sans-serif;
-  opacity: 0;
-  transition: opacity 1s;
+.conteiner::-webkit-scrollbar-button{
+  background:red;
 }
 
-a:hover::after {
-  opacity: 1;
+.conteiner::-webkit-scrollbar-thumb{
+  background:goldenrod;
+  border-radius: 1em;
 }
 
-a::before{
-  border-radius: 50%;
-  content: '';
+.conteiner::-webkit-scrollbar-track-piece{
+  background:black;
+}
+
+.conteiner::-webkit-scrollbar-corner{
+  background:linear-gradient(blue,red);
   display: block;
-  width: 1rem;
-  height: 1rem;
-  background: white;
-  margin-bottom: 0.5rem;
-  transition:transform 0.5s;
 }
 
-section:nth-of-type(1){
-  background: tomato;
+
+
+/* pseudoclases del scrollbar 
+active ---->mientras se hace click en el elmento
+
+hover-->hover
+
+*/
+
+
+
+.conteiner::-webkit-scrollbar-thumb:active{
+  background:linear-gradient(white,black);
+  border-radius: 1em;
 }
-section:nth-of-type(2){
-  background: skyblue;
+
+.conteiner::-webkit-scrollbar-thumb:hover{
+  background:linear-gradient(yellow,limegreen);
+  border-radius: 1em;
 }
-section:nth-of-type(3){
-  background: limegreen;
+
+p{
+  width: 400px;
 }
-section:nth-of-type(4){
-  background: goldenrod;
-}
+
