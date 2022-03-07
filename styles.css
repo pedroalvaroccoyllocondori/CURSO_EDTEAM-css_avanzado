@@ -1,6 +1,7 @@
 /* SCROLL 
 
 CONTENIDO DESBORDADO
+funcionamiento optimizado en firefox
 
 overflow /hidden/visible/auto/scroll
 
@@ -26,29 +27,37 @@ comportamiento del scroll
 scroll-padding-top---->padres
 scroll-margin-top------>hijos
 
+scroll-snap-type----> recibe 2 valores: eje, tipo de ajuste
+x
+y
+both-->ambos ejes
+proximity-->acerca al elemento un scrol automatico
+mandatory--->alinea los elementos cuando decta la intencion del scroll
+scroll-snap-align--->funciona en conujto con scrollsnap type
 
 */
 
-/* 
 
 section{
   width: 300px;
   height:300px;
   overflow: auto;
-  scroll-behavior: smooth;
+  scroll-snap-type: both mandatory;
+  scroll-padding: 3rem 0 0 5rem;
+  /* scroll-behavior: smooth; */
 
-} */
+}
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-padding-top: 4rem;
+  /* scroll-padding-top: 4rem; */
 }
 
 html{
   margin:0;
-  scroll-behavior:smooth;
+  /* scroll-behavior:smooth; */
 }
 nav{
   padding: 3rem;
@@ -57,15 +66,26 @@ nav{
   background:linear-gradient(white,blue)
 }
 
+section{
+  display: grid;
+  grid-template-columns: repeat(4,300px);
+  gap:1rem
+}
+
 section div{
-  scroll-margin-top: 5rem;
+
+  scroll-snap-align: start;
+
+  /* scroll-margin-top: 5rem; */
   width: 100%;
   height: 100vh;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 5rem;
-  color: white
+  align-items: center; */
+  font-size: 15rem;
+  color: white;
+  flex:none;
+  background:blue;
 }
 
 
@@ -78,7 +98,7 @@ section div:nth-child(2){
 }
 section div:nth-child(3){
   background: limegreen;
-  scroll-margin-top: .25rem;
+  /* scroll-margin-top: .25rem; */
 }
 section div:nth-child(4){
   background: peru;
