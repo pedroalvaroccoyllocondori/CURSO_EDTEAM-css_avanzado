@@ -42,8 +42,30 @@ header, aside,main,footer{
 
 
 main {
+  --colums:1;
   grid-row-start: 1;
+  display:grid;
+  grid-template-columns: repeat(var(--colums),1fr);
+  gap: 1rem;
 }
+
+article{
+  padding:1rem;
+  background: cadetblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width:680px){
+  main{
+    --colums:2;
+
+  }
+
+
+}
+
 
 @media screen and (min-width:1024px){
   .body{
@@ -57,6 +79,7 @@ main {
   }
   main{
     grid-column: 2;
+    --colums:3
   }
 }
 
