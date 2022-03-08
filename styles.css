@@ -1,120 +1,37 @@
-/* SCROLL 
-
-CONTENIDO DESBORDADO
-funcionamiento optimizado en firefox
-
-overflow /hidden/visible/auto/scroll
-
-
-visible---> viene por defecto en los contenedores contenido desbordado visible
-hidden---> ocultar contenido desbordado
-scroll--> muestra las barras de scroll en el contenido desbordado muestra ambas barras de scroll horizontal y vertical
-auto--->muestra barras de scroll solor el el lado que se desborda
-
-
-OVERFLOW PERSONAÑIZADO PARA CADA UNA DE LAS BARRAS
-
-overflow-x---->
-overflow-y---->
-
-NOTA:CUANDO PONEMOS OVERFLOW A UNO DE LOS EJES EL OTRO EJE AUTOMATICAMENTE PASA A TENER EL VALOR DE AUTO
-
-scroll-behaibor--->animacion en el scroll
-si queremos hacer el efecto en el body tenemos que usar el selector html
-transcion entre los eleemtos 
-valores smooth
-
-
-comportamiento del scroll
-
-scroll-padding-top---->padres
-scroll-margin-top------>hijos
-
-scroll-snap-type----> recibe 2 valores: eje, tipo de ajuste
-x
-y
-both-->ambos ejes
-proximity-->acerca al elemento un scrol automatico
-mandatory--->alinea los elementos cuando decta la intencion del scroll
-scroll-snap-align--->funciona en conujto con scrollsnap type
-
-
+/* LAYOUTS
 
 
 */
 
 
-:root{
-  --track-bg:#eee;
-  --thumb-hover:#aaa;
-  --thumb-bg:#ccc;
-  --scroll-radio:10px;
-}
-
-@media (prefers-color-scheme: dark) {
-
-
-  :root{
-    --track-bg:#2D3134;
-    --thumb-hover:#aaa;
-    --thumb-bg:#222629;
-    --scroll-radio:10px;
-  }
-  
-  body {
-    background: #282D31;
-  
-  }
-  .conteiner{
-    background: #141618;
-  }
-
-}
-
-
 body{
+  margin :0;
+}
+
+
+header, aside,main,footer{
+  background:tomato;
+  padding: 1rem;
+}
+
+.grid{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height:100vh;
+  flex-direction: column;
+  gap:1rem;
+  min-height: 100vh;
 }
 
-.conteiner{
-  width: 300px;
-  height:300px;
-  overflow:auto;
-  padding:1rem;
-  border-radius: 0.5rem;
-}
-p{
-  width: 400px;
+.body{
+  display: flex;
+  gap: 1rem;
+  flex-grow: 1;
+
 }
 
-
-
-
-::-webkit-scrollbar{
-  background: aqua;
-  border-radius: 2em;
-  width: 14px;/*solo aplica al ancho de la barra vertical*/
-  height: 14px;/*solo aplica al ancho de la barra horizontall*/
+main {
+  flex-grow: 1;
 }
 
-::-webkit-scrollbar-track{
-  background: var(--track-bg);
-  border-radius:var(--scroll-radio)
+aside{
+  flex-basis:250px;
 }
-
-
-::-webkit-scrollbar-thumb{
-  background: var(--thumb-bg);
-  border-radius: var(--scroll-radio);
-  border:3px solid var(--track-bg)
-}
-
-::-webkit-scrollbar-corner{
-  display: none
-}
-
-
-
